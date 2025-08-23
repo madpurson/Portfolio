@@ -1,13 +1,16 @@
 import { useState } from 'react'
 import './App.css'
-import { NavbarDark } from './component/navbar'
+import { NavPannel } from './components/NavPannel'
 
 function App() {
 
   return (
     <>
-      <NavbarDark></NavbarDark>
-      <div>EMPTY</div>
+      <div className='flex flex-col w-[900px]'>
+        <NavPannel />
+        <div>EMPTY</div>
+      </div>
+      
     </>
   )
 }

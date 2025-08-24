@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import './App.css'
 import { NavPannel } from './components/NavPannel'
+import { MainBody } from './components/Body'
 
 function App() {
 
@@ -8,7 +9,7 @@ function App() {
     <>
       <div className='flex flex-col w-[900px]'>
         <NavPannel />
-        <div>EMPTY</div>
+        <MainBody />
       </div>
       
     </>

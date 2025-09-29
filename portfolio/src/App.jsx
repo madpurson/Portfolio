@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import './App.css'
 import { NavPannel } from './components/NavPannel'
-import { MainBody } from './components/Body'
+import { LandingPageBody } from './components/LandingPageBody'
 
 function App() {
 
@@ -9,7 +9,7 @@ function App() {
     <>
       <div className='flex flex-col w-[900px]'>
         <NavPannel />
-        <MainBody />
+        <LandingPageBody />
       </div>
       
     </>

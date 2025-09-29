@@ -1,6 +1,6 @@
 import React from "react";
 
-export function MainBody() {
+export function LandingPageBody() {
     return (
         <div className="mt-10">
             <h1 className="object-top-left text-start">

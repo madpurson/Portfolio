@@ -23,8 +23,8 @@ export function LandingPageBody() {
                         </button>
                     </div>
                 </div>
-                <div className="w-2/5">
-                    <img src="banner.png" alt="banner" />
+                <div className="w-2/5 box-border">
+                    <img className="w-full" src="banner.png" alt="banner" />
                 </div>
             </div>
             

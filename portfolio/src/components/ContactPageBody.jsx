@@ -3,20 +3,23 @@ import { PhoneIcon, EnvelopeIcon } from "@heroicons/react/24/outline";
 
 export function ContactPageBody() {
     return (
-        <>
-            <img src="background.png" alt="" />
-            <h1>Contact.</h1>
-            <div>
-                <PhoneIcon />
-                <span>+639499750275</span>
-                <EnvelopeIcon />
-                <span>pelegrinompatrick@gmail.com</span>
+        <>  
+            <div className="h-screen bg-blur">
+                {/* <img src="background.png" alt="" /> */}
+                <h1>Contact.</h1>
+                <div className="text-xs flex h-full">
+                    {/* <PhoneIcon className=" text-blue-500" /> */}
+                    <span>+639499750275</span>
+                    {/* <EnvelopeIcon className=" text-blue-500" /> */}
+                    <span>pelegrinompatrick@gmail.com</span>
+                </div>
+                <form action="post">
+                    <input type="text" name="email" />
+                    <input type="text" name="subject" />
+                    <textarea name="message" />
+                </form>
             </div>
-            <form action="post">
-                <input type="text" name="email" />
-                <input type="text" name="subject" />
-                <textarea name="message" />
-            </form>
+            
         </>
     )
 }

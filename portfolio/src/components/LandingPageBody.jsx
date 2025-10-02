@@ -2,7 +2,7 @@ import React from "react";
 
 export function LandingPageBody() {
     return (
-        <div className="mt-10">
+        <div className="mt-10 h-screen">
             <h1 className="object-top-left text-start">
                 Michael Patrick Pelegrino.
             </h1>

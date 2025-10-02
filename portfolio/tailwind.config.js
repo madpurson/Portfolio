@@ -7,7 +7,7 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        'blur': "url('/background.png')",
+        'blur-pattern': "url('background.png')",
       }
     },
   },

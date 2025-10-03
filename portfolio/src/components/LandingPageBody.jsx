@@ -3,7 +3,7 @@ import React from "react";
 export function LandingPageBody() {
     return (
         <div className="mt-10 h-screen">
-            <h1 className="object-top-left text-start">
+            <h1 className="object-top-left text-start bg-midnight">
                 Michael Patrick Pelegrino.
             </h1>
             <h3 className="text-start">

@@ -4,7 +4,7 @@ import tailwindConfig from "../../tailwind.config";
 export function LandingPageBody() {
     return (
         <div className="mt-10 h-screen">
-            <h1 className="object-top-left text-start text-midnight">
+            <h1 className="object-top-left text-start text-dark-500">
                 Michael Patrick Pelegrino.
             </h1>
             <h3 className="text-start text-midnight">

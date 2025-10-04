@@ -52,7 +52,7 @@ export function NavPannel() {
             href="#"
             className="mr-4 cursor-pointer py-1.5 font-medium"
           >
-            Portfolio
+            The Patrick Times
           </Typography>
           <div className="mr-4 hidden lg:block">{navList}</div>
           <Button

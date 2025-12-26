@@ -1,3 +1,10 @@
+@font-face {
+  font-family: 'DeltaGothic';
+  src: url('/fonts/Dela_Gothic_One/DelaGothicOne-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
 @import "tailwindcss";
 
 * {
@@ -12,6 +19,10 @@
   background-color: #1E1E1E;
   justify-content: center;
   display: flex;
+}
+
+.color-main {
+  color: #DA1826;
 }
 
 .logo {

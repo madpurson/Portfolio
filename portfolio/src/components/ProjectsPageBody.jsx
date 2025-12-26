@@ -15,7 +15,7 @@ export function ProjectsPageBody() {
                         </div>
                     </a>
 
-                    <a href="https://chiron-s5jp5b1ed-iammichaelps-projects.vercel.app/">
+                    <a href="https://chiron-central.vercel.app/">
                         <div className="w-9/10 flex-1">
                             <img className="w-9/10 object-contain" src="/images/vector2.png" alt="projects" />
                             <span>Chiron.</span>

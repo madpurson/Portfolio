@@ -10,7 +10,7 @@ function App() {
 
   return (
     <>
-      <div className='flex flex-col w-[900px]'>
+      <div className='flex flex-col w-[900px] object-center'>
         <NavPannel />
         <LandingPageBody />
         <ProjectsPageBody />

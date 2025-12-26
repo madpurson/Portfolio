@@ -10,6 +10,8 @@
   padding: 2rem;
   text-align: center;
   background-color: #1E1E1E;
+  justify-content: center;
+  display: flex;
 }
 
 .logo {

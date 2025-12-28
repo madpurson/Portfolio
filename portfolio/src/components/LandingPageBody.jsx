@@ -20,7 +20,7 @@ export function LandingPageBody() {
                         hover:bg-rose-800 hover:scale-105 transition-all duration-200 ease-in-out">
                             Hire me
                         </button>
-                        <button className="flex grow rounded-md text-rose-50 p-3 justify-center">
+                        <button className="flex grow rounded-md text-rose-50 p-3 justify-center bg-amber-950">
                             Download resume
                         </button>
                     </div>

@@ -5,6 +5,11 @@
   font-style: normal;
 }
 
+@theme {
+  --color-dark-500: #3f3cbb;
+  --font-delta: 'DeltaGothic', sans-serif;
+}
+
 @import "tailwindcss";
 
 body {
@@ -22,7 +27,7 @@ body {
 }
 
 .color-main {
-  color: #DA1826;
+  color: #BC1420;
 }
 
 .color-main-bg {

@@ -1,5 +1,10 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: 'DeltaGothic';
+  src: url('/fonts/Dela_Gothic_One/DelaGothicOne-Regular.ttf') format('truetype');
+}
+
 @theme {
   --color-dark-500: #3f3cbb;
 }

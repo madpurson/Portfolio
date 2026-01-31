@@ -1,16 +1,12 @@
 import React from "react";
 import tailwindConfig from "../../tailwind.config";
+// import "../css/landing.css";
 
 export function LandingPageBody() {
     return (
         <div className="mt-10 h-screen landing-page-body relative">
-            <h1 className="object-top-left text-start text-dark-500 text-4xl font-bold color-main font-delta">
-                Michael Patrick Pelegrino.
-            </h1>
-            <h3 className="text-start text-rose-50">
-                Software Developer
-            </h3>
-            <div className="flex flex-row items-end inset-x-0 bottom-50 absolute">
+            
+            <div className="object-top-left flex flex-row absolute">
                 <div className="text-start w-3/5 pr-10 text-rose-50">
                     <p>
                         I’m a software developer with a focus on backend systems, full-stack web development, and building real-world solutions. I enjoy working on meaningful projects that combine code, creativity, and impact.
@@ -26,9 +22,17 @@ export function LandingPageBody() {
                         </button>
                     </div>
                 </div>
-                <div className="w-2/5 box-border">
-                    <img className="w-full" src="/images/banner.png" alt="banner" />
-                </div>
+            </div>
+            <div className="profile w-full items-end inset-x-0 bottom-50">
+                <h1 className="text-start text-dark-500 text-4xl font-bold color-main font-delta">
+                    Michael Patrick Pelegrino.
+                </h1>
+                <h3 className="text-start text-rose-50">
+                    Software Developer
+                </h3>
+            </div>
+            <div className="w-2/5 box-border landing-banner-container">
+                <img className="w-full landing-banner-image" src="/images/banner1.png" alt="banner" />
             </div>
             
         </div>

@@ -6,8 +6,8 @@ export function LandingPageBody() {
     return (
         <div className="mt-10 h-screen landing-page-body relative">
             
-            <div className="object-top-left flex flex-row absolute">
-                <div className="text-start w-3/5 pr-10 text-rose-50">
+            <div className="object-top-left flex">
+                <div className="text-start w-3/5 pr-10 text-rose-50 flex flex-row justify-center">
                     <p>
                         I’m a software developer with a focus on backend systems, full-stack web development, and building real-world solutions. I enjoy working on meaningful projects that combine code, creativity, and impact.
                     </p>

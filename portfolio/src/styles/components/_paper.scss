@@ -1,0 +1,8 @@
+/* components/_paper.scss */
+
+.paper {
+  background: $paper-warm;
+  padding: $space-lg;
+  box-shadow: $shadow-paper;
+  transform: rotate(-1.5deg);
+}

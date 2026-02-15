@@ -1,8 +1,37 @@
 import React from "react";
 import tailwindConfig from "../../tailwind.config";
 // import "../css/landing.css";
+import { mouseTracker, startLoop, updateEye } from "../scripts/landingPageHelper";
+import { useEffect } from "react";
+// import { mouseTracker, startLoop } from "./mouseTracker";
 
 export function LandingPageBody() {
+    useEffect(() => {
+        const tracker = mouseTracker("patrick");
+        if (!tracker) return;
+        // const leftEye = document.getElementById("left-eye");
+        // console.log("leftEye:", leftEye.style);
+        const leftPupil = document.getElementById("left-pupil");
+        const rightPupil = document.getElementById("right-pupil");
+        if (!leftPupil || !rightPupil) return;
+      
+        const stop = startLoop(() => {
+          const { x, y } = tracker.mouse;
+          updateEye("left-pupil", tracker.mouse);
+          updateEye("right-pupil", tracker.mouse);
+          // render logic here
+        }, tracker.isActive);
+
+        // dynamicEyeMovement("left-pupil", tracker.mouse);
+        // dynamicEyeMovement("right-pupil", tracker.mouse);
+      
+        return () => {
+          stop();
+          tracker.destroy();
+        };
+        
+      }, []);
+      
     return (
         <div className="mt-10 h-screen landing-page-body relative">
             
@@ -31,8 +60,16 @@ export function LandingPageBody() {
                     Software Developer
                 </h3>
             </div>
-            <div className="w-2/5 box-border landing-banner-container">
-                <img className="w-full landing-banner-image" src="/images/banner1.png" alt="banner" />
+            <div className="w-full box-border landing-banner-container">
+                <img className="w-full landing-banner-image" id="patrick" src="/images/banner1.png" alt="banner" />
+                <div className="eyes-container">
+                    <div className="eye eye--left" id="left-eye">
+                        <div className="pupil pupil--left" id="left-pupil"></div>
+                    </div>
+                    <div className="eye eye--right" id="right-eye">
+                        <div className="pupil pupil--right" id="right-pupil"></div>
+                    </div>
+                </div>
             </div>
             
         </div>

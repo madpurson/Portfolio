@@ -1,6 +1,8 @@
 // _eye.scss
 $eye-color: #fff;
 $pupil-color: #000;
+$right-eye-image: url('/images/right-eye.png');
+$left-eye-image: url('/images/left-eye.png');
 
 .eyes-container {
   position: absolute;
@@ -18,17 +20,32 @@ $pupil-color: #000;
   --eye-radius: 24px;
   --pupil-radius: 12px;
   --pupil-max-offset: 12px;
+  --right-eye: $right-eye-image;
+  --left-eye: $left-eye-image;
 
   position: relative;
   width: calc(var(--eye-radius) * 2);
   height: calc(var(--eye-radius) * 2);
-  border-radius: 50%;
+  // border-radius: 50%;
 
-  background-color: $eye-color;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  // background-color: $eye-color;
+  background-image: var(--left-eye);
 //   padding: 30px;
     display: flex;
      justify-content: center;
      align-items: center;
+}
+
+.eye--left {
+  background-image: $left-eye-image;
+}
+
+.eye--right {
+  background-image: $right-eye-image;
 }
 
 .pupil {

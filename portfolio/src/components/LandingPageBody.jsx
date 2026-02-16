@@ -64,9 +64,11 @@ export function LandingPageBody() {
                 <img className="w-full landing-banner-image" id="patrick" src="/images/banner1.png" alt="banner" />
                 <div className="eyes-container">
                     <div className="eye eye--left" id="left-eye">
+                        {/* <img src="/images/left-eye.png" alt="pupil" /> */}
                         <div className="pupil pupil--left" id="left-pupil"></div>
                     </div>
                     <div className="eye eye--right" id="right-eye">
+                        {/* <img src="/images/right-eye.png" alt="pupil" /> */}
                         <div className="pupil pupil--right" id="right-pupil"></div>
                     </div>
                 </div>

@@ -13,13 +13,13 @@ $left-eye-image: url('/images/left-eye.png');
   flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 5px;
   // height: fit-content;
 }
 
 .eye {
-  --eye-radius: 30px;
-  --pupil-radius: 12px;
+  --eye-radius: 35px;
+  --pupil-radius: 5px;
   --pupil-max-offset: 12px;
 
   position: relative;

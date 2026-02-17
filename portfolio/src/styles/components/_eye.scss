@@ -13,15 +13,14 @@ $left-eye-image: url('/images/left-eye.png');
   flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 25px;
+    gap: 10px;
+  // height: fit-content;
 }
 
 .eye {
-  --eye-radius: 24px;
+  --eye-radius: 30px;
   --pupil-radius: 12px;
   --pupil-max-offset: 12px;
-  --right-eye: $right-eye-image;
-  --left-eye: $left-eye-image;
 
   position: relative;
   width: calc(var(--eye-radius) * 2);
@@ -38,6 +37,7 @@ $left-eye-image: url('/images/left-eye.png');
     display: flex;
      justify-content: center;
      align-items: center;
+     margin-bottom: 15px;
 }
 
 .eye--left {

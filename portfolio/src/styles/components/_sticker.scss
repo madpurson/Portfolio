@@ -1,0 +1,40 @@
+$eyes-url: url('/images/eyes.png');
+
+.sticker {
+    max-width: 100%;
+    height: auto;
+}
+
+.sticker {
+    // position: absolute;
+    // top: 0;
+    // left: 0;
+    // z-index: 5;
+    // width: 50%;
+    height: auto;
+}
+
+.sticker--main {
+
+    width: 100%;
+    height: auto;
+}
+
+.eyes-sticker {
+    --eyes-y: 20%;
+    
+    background-image: $eyes-url;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    top: var(--eyes-y);
+    width: 40%;
+    height: 20%;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 15px;
+}

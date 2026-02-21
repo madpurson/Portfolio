@@ -53,13 +53,13 @@ export function LandingPageBody() {
                         {/* <img src="/images/eyes.png" alt="eyes"  /> */}
                 </div>
             </div>
-            <div className="profile w-full items-end inset-x-0 bottom-50">
-                <h1 className="text-start text-dark-500 text-4xl font-bold color-main primary-h1">
-                    Michael Patrick Pelegrino. 
+            <div className="profile container column w-full items-end">
+                <h1 className="font-bold color-main primary-h1">
+                    Patrick Pelegrino. 
                 </h1>
-                <h3 className="text-start text-rose-50">
+                <span className="primary-color secondary-sm">
                     Software Developer
-                </h3>
+                </span>
             </div>
             
             <div className="landing-header">
@@ -70,7 +70,7 @@ export function LandingPageBody() {
                         </p>
                     </div> 
                     <div className="flex px-4 grow mt-10 opacity-75 text-center row container action-buttons-container">
-                        <a className="flex primary-color secondary-body action-button" href="mailto:patrickmpelegrino@gmail.com">
+                        <a className="flex primary-color secondary-body action-button" href="mailto:pelegrinompatrick@gmail.com">
                             Hire me
                         </a>
                         <a className="flex primary-color secondary-body action-button" href="/files/Michael_Patrick_Pelegrino_Resume.pdf" target="_blank" rel="noopener noreferrer">

@@ -1,5 +1,14 @@
 $primary-color: #9A0F18;
 $secondary-color: #1E1E1E;
+$board-color: #D9D9D9;
+
+#root {
+    --primary-color: #{$primary-color};
+    --secondary-color: #{$secondary-color};
+    --board-color: #{$board-color};
+    
+    background-color: var(--board-color);
+}
 
 .primary-color {
     color: $primary-color !important;
@@ -15,4 +24,8 @@ $secondary-color: #1E1E1E;
 
 .secondary-bg {
     background-color: $secondary-color;
+}
+
+.boarder-color {
+    border-color: $primary-color;
 }

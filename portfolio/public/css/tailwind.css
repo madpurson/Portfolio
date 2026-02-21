@@ -1,11 +1,13 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 @font-face {
   font-family: 'DeltaGothic';
   src: url('/fonts/Dela_Gothic_One/DelaGothicOne-Regular.ttf') format('truetype');
 }
 
-@theme {
+:root {
   --color-dark-500: #3f3cbb;
   --font-delta: 'DeltaGothic', sans-serif;
 }

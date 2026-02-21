@@ -3,6 +3,7 @@ $eye-color: #fff;
 $pupil-color: #000;
 $right-eye-image: url('/images/right-eye.png');
 $left-eye-image: url('/images/left-eye.png');
+$eyes-url: url('/images/eyes.png');
 
 .eyes-container {
   position: absolute;
@@ -13,40 +14,34 @@ $left-eye-image: url('/images/left-eye.png');
   flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 5px;
+    gap: 15px;
   // height: fit-content;
+  // background-image: $eyes-url;
 }
 
 .eye {
-  --eye-radius: 35px;
-  --pupil-radius: 5px;
+  --eye-radius: 8%;
+  --pupil-radius: 50%;
   --pupil-max-offset: 12px;
 
   position: relative;
   width: calc(var(--eye-radius) * 2);
   height: calc(var(--eye-radius) * 2);
   // border-radius: 50%;
-
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-
-  // background-color: $eye-color;
-  background-image: var(--left-eye);
-//   padding: 30px;
-    display: flex;
-     justify-content: center;
-     align-items: center;
-     margin-bottom: 15px;
+  object-fit: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5px;
 }
 
-.eye--left {
-  background-image: $left-eye-image;
-}
+// .eye--left {
+//   background-image: $left-eye-image;
+// }
 
-.eye--right {
-  background-image: $right-eye-image;
-}
+// .eye--right {
+//   background-image: $right-eye-image;
+// }
 
 .pupil {
   position: absolute;
@@ -56,11 +51,11 @@ $left-eye-image: url('/images/left-eye.png');
   width: calc(var(--pupil-radius) * 2);
   height: calc(var(--pupil-radius) * 2);
   border-radius: 50%;
-  background: black;
+  object-fit: cover;
 
   transform: translate(
-    calc(-50% + var(--pupil-x, 0px)),
-    calc(-50% + var(--pupil-y, 0px))
+    calc(0% + var(--pupil-x, 0px)),
+    calc(0% + var(--pupil-y, 0px))
   );
 
   transition: transform 120ms ease-out;

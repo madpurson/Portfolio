@@ -14,40 +14,40 @@ $lh-tight: 1.1;
 $lh-normal: 1.6;
 
 .primary-h1 {
-  font-family: $font-primary;
-  font-size: $fs-h1;
-  line-height: $lh-tight;
-  font-weight: 400;
+  font-family: $font-primary !important;
+  font-size: $fs-h1 !important;
+  line-height: $lh-tight ;
+  font-weight: 1000 !important;
 }
 
 .primary-h2 {
-  font-family: $font-primary;
-  font-size: $fs-h2;
-  line-height: $lh-tight;
-  font-weight: 400;
+  font-family: $font-primary !important;
+  font-size: $fs-h2 !important;
+  line-height: $lh-tight !important;
+  font-weight: 400 !important;
 }
 
 .secondary-h2 {
-  font-family: $font-secondary;
-  font-size: $fs-h2;
-  line-height: $lh-normal;
+  font-family: $font-secondary !important;
+  font-size: $fs-h2 !important;
+  line-height: $lh-normal !important;
 }
 
 .secondary-body {
-  font-family: $font-secondary;
-  font-size: $fs-body;
-  line-height: $lh-normal;
+  font-family: $font-secondary !important;
+  font-size: $fs-body !important;
+  line-height: $lh-normal !important;
 }
 
 .primary-sm {
-  font-family: $font-primary;
-  font-size: $fs-sm;
+  font-family: $font-primary !important;
+  font-size: $fs-sm !important;
   letter-spacing: 0.05em;
 }
 
 .secondary-sm {
-  font-family: $font-secondary;
-  font-size: $fs-sm;
+  font-family: $font-secondary !important;
+  font-size: $fs-sm !important;
   color: rgba(0, 0, 0, 0.6);
 }
 

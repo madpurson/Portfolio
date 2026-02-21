@@ -1,0 +1,110 @@
+/* base/_typography.scss */
+
+$font-primary: 'Dela Gothic', sans-serif;   // Display / identity
+$font-secondary: 'Didact Gothic', sans-serif; // Body / readable
+
+// font scales
+$fs-h1: clamp(2.5rem, 5vw, 3.5rem);
+$fs-h2: clamp(1.75rem, 3vw, 2.25rem);
+$fs-body: 1rem;
+$fs-sm: 0.875rem;
+
+// line heights
+$lh-tight: 1.1;
+$lh-normal: 1.6;
+
+.primary-h1 {
+  font-family: $font-primary;
+  font-size: $fs-h1;
+  line-height: $lh-tight;
+  font-weight: 400;
+}
+
+.primary-h2 {
+  font-family: $font-primary;
+  font-size: $fs-h2;
+  line-height: $lh-tight;
+  font-weight: 400;
+}
+
+.secondary-h2 {
+  font-family: $font-secondary;
+  font-size: $fs-h2;
+  line-height: $lh-normal;
+}
+
+.secondary-body {
+  font-family: $font-secondary;
+  font-size: $fs-body;
+  line-height: $lh-normal;
+}
+
+.primary-sm {
+  font-family: $font-primary;
+  font-size: $fs-sm;
+  letter-spacing: 0.05em;
+}
+
+.secondary-sm {
+  font-family: $font-secondary;
+  font-size: $fs-sm;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+h1 {
+  @extend .primary-h1;
+}
+
+h2 {
+  @extend .primary-h2;
+}
+
+p {
+  @extend .secondary-body;
+}
+
+// body {
+//     font-family: $font-secondary;
+//     font-size: 1rem;
+//     line-height: 1.5;
+//     color: #1E1E1E;
+//     background: $paper-base;
+//   }
+  
+  /* Display */
+  // .display-hero {
+  //   font-family: $font-display;
+  //   font-size: $display-hero-size;
+  //   line-height: $display-hero-line;
+  // }
+  
+  // .display-page {
+  //   font-family: $font-display;
+  //   font-size: $display-page-size;
+  //   line-height: $display-page-line;
+  // }
+  
+  // .project-title {
+  //   font-family: $font-display;
+  //   font-size: $display-project-size;
+  //   line-height: $display-project-line;
+  // }
+  
+  // /* Reading */
+  // .lead {
+  //   font-size: $text-lead-size;
+  //   line-height: $text-lead-line;
+  // }
+  
+  // .meta {
+  //   font-size: $text-small-size;
+  //   line-height: $text-small-line;
+  //   color: $ink-muted;
+  // }
+  
+  // .caption {
+  //   font-size: $text-caption-size;
+  //   line-height: $text-caption-line;
+  //   color: $ink-muted;
+  // }
+  

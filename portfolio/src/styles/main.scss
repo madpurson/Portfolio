@@ -1,10 +1,23 @@
-// Import order matters: variables & mixins first
-@import 'variables';
-@import 'mixins';
-@import 'reset';
-@import 'base';
-@import 'layout';
-@import 'components';
-@import 'pin';
-@import 'animations';
-@import 'responsive';
+/* abstracts */
+// @use './abstracts/variables';
+// @use './abstracts/colors';
+// @use './abstracts/typography';
+// @use './abstracts/mixins';
+
+/* base */
+@use './base/fonts';
+@use './base/typography';
+// @use './base/reset';
+@use './base/base';
+@use './base/colors';
+
+
+/* layout */
+// @use './layout/board';
+@use './layout/layout';
+
+/* components */
+// @use './components/pin';
+// @use './components/paper';
+@use './components/eye';
+@use './components/sticker';

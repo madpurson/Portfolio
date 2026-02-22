@@ -25,7 +25,8 @@ $eyes-url: url('/images/eyes.png');
   --pupil-max-offset: 12px;
 
   position: relative;
-  width: calc(var(--eye-radius) * 2);
+  // width is based from the eye radius, multiplied by 2 for diameter, and then multiplied by 2 for scaling [eye is rectangle]
+  width: calc(var(--eye-radius) * 2 * 2);
   height: calc(var(--eye-radius) * 2);
   // border-radius: 50%;
   object-fit: cover;
@@ -48,7 +49,8 @@ $eyes-url: url('/images/eyes.png');
   left: 50%;
   top: 50%;
 
-  width: calc(var(--pupil-radius) * 2);
+  // same logic as with eyes [adjusted for pupil radius and scaling]
+  width: calc(var(--pupil-radius) * 2 / 2);
   height: calc(var(--pupil-radius) * 2);
   border-radius: 50%;
   object-fit: cover;

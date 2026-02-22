@@ -34,7 +34,7 @@ export function LandingPageBody() {
       }, []);
       
     return (
-        <div className="mt-10 h-screen landing-page-body relative">
+        <div className="mt-10 page-body landing-page-body relative">
             <div className="w-full box-border landing-banner-container container">
                 <img className="landing-banner-image sticker--main" id="patrick" src="/images/banner1.png" alt="banner" />
                 <div className="eyes-container container">

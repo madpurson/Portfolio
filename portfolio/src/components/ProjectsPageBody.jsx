@@ -3,7 +3,7 @@ import React from "react";
 export function ProjectsPageBody() {
     return (
         <> 
-            <div className="h-screen">
+            <div className="page-body">
                 <h1 className="object-top-left text-start">
                     Projects.
                 </h1>

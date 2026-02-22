@@ -1,7 +1,7 @@
 export function AboutPageBody() {
     return (
         <> 
-            <div className="h-screen">
+            <div className="page-body">
                 <h1>About.</h1>
                 <div>
                     <p>

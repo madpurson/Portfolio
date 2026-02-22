@@ -1,41 +1,34 @@
 import React from "react";
 import tailwindConfig from "../../tailwind.config";
 // import "../css/landing.css";
-import { mouseTracker, startLoop, updateEye } from "../scripts/landingPageHelper";
+import { mouseTracker, startLoop, renderEye } from "../scripts/landingPageHelper";
 import { useEffect } from "react";
 
 // import { mouseTracker, startLoop } from "./mouseTracker";
 
 export function LandingPageBody() {
     useEffect(() => {
-        const tracker = mouseTracker("patrick");
-        if (!tracker) return;
-        // const leftEye = document.getElementById("left-eye");
-        // console.log("leftEye:", leftEye.style);
-        const leftPupil = document.getElementById("left-pupil");
-        const rightPupil = document.getElementById("right-pupil");
-        if (!leftPupil || !rightPupil) return;
-      
-        const stop = startLoop(() => {
-          const { x, y } = tracker.mouse;
-          updateEye("left-pupil", tracker.mouse);
-          updateEye("right-pupil", tracker.mouse);
-          // render logic here
-        }, tracker.isActive);
+    const tracker = mouseTracker("patrick-container");
+    if (!tracker) return;
 
-        // dynamicEyeMovement("left-pupil", tracker.mouse);
-        // dynamicEyeMovement("right-pupil", tracker.mouse);
-      
-        return () => {
-          stop();
-          tracker.destroy();
-        };
-        
-      }, []);
-      
+    const leftEye = document.getElementById("left-eye");
+    const rightEye = document.getElementById("right-eye");
+
+    if (!leftEye || !rightEye) return;
+
+    const stop = startLoop(() => {
+        renderEye(leftEye, tracker.mouse);
+        renderEye(rightEye, tracker.mouse);
+    }, tracker.isActive);
+
+    return () => {
+        stop();
+        tracker.destroy();
+    };
+    }, []);
     return (
         <div className="mt-10 page-body landing-page-body relative">
-            <div className="w-full box-border landing-banner-container container">
+            <div id="patrick-container" className="w-full box-border landing-banner-container container">
                 <img className="landing-banner-image sticker--main" id="patrick" src="/images/banner1.png" alt="banner" />
                 <div className="eyes-container container">
                     <div className="sticker eyes-sticker container">

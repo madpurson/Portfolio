@@ -63,67 +63,64 @@ export const startLoop = (
   };
 };
 
-const eyeOffsetNormalizer = (position: number) => {
-  const maxOffset = 10; // max pupil movement in pixels
-  return Math.max(-maxOffset, Math.min(maxOffset, position));
+export function updateEye(eye: HTMLElement) {
+  const pupil = eye.querySelector<HTMLElement>(".pupil");
+  if (!pupil) return;
+
+  const onMove = (e: MouseEvent) => {
+    const rect = eye.getBoundingClientRect();
+
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+
+    const cx = rect.width / 2;
+    const cy = rect.height / 2;
+
+    const dx = x - cx;
+    const dy = y - cy;
+
+    const len = Math.hypot(dx, dy) || 1;
+
+    // Normalized direction [-1, 1]
+    const nx = dx / len;
+    const ny = dy / len;
+
+    // Convert to percentage of pupil size
+    const px = nx * 50;
+    const py = ny * 50;
+
+    pupil.style.setProperty("--pupil-x", `${px}%`);
+    pupil.style.setProperty("--pupil-y", `${py}%`);
+  };
+
+  eye.addEventListener("mousemove", onMove);
+
+  return () => eye.removeEventListener("mousemove", onMove);
 }
 
-// export const updateEye = (eyeElementId: string, mouse: MousePosition, start: MousePosition) => {
-//   const eye = document.getElementById(eyeElementId);
-//   if (!eye) return;
-
-//   console.log("Updating eye position:", mouse);
-
-//   // const centerX = eye.offsetWidth / 2;
-//   // const centerY = eye.offsetHeight / 2;
-  
-//   eye.style.setProperty("--pupil-x", `${mouse.x}px`);
-//   eye.style.setProperty("--pupil-y", `${mouse.y}px`);
-//   const maxDistance = 10; // max pupil movement in pixels
-
-// }
-
-export function updateEye(eyeId: string, mouse: { x: number; y: number }) {
-  const eye = document.getElementById(eyeId);
-  if (!eye) return;
+export function renderEye(
+  eye: HTMLElement,
+  mouse: MousePosition
+) {
+  const pupil = eye.querySelector<HTMLElement>(".pupil");
+  if (!pupil) return;
 
   const rect = eye.getBoundingClientRect();
 
-  // Eye center in viewport coordinates
-  const eyeCenterX = rect.left + rect.width / 2;
-  const eyeCenterY = rect.top + rect.height / 2;
+  const cx = rect.width / 2;
+  const cy = rect.height / 2;
 
-  // Vector from eye center → mouse
-  const dx = mouse.x - eyeCenterX;
-  const dy = mouse.y - eyeCenterY;
+  const dx = mouse.x - (rect.left + cx);
+  const dy = mouse.y - (rect.top + cy);
 
-  // Distance (vector magnitude)
-  const distance = Math.sqrt(dx * dx + dy * dy);
+  const len = Math.hypot(dx, dy) || 1;
 
-  // Read max offset from CSS (design-controlled)
-  const maxOffset = parseFloat(
-    getComputedStyle(eye).getPropertyValue("--pupil-max-offset")
-  );
+  const nx = dx / len;
+  const ny = dy / len;
 
-  // Avoid division by zero
-  if (distance === 0) {
-    eye.style.setProperty("--pupil-x", "0px");
-    eye.style.setProperty("--pupil-y", "0px");
-    return;
-  }
+  const px = nx * 50;
+  const py = ny * 50;
 
-  // Normalize direction
-  const nx = dx / distance;
-  const ny = dy / distance;
-
-  // Clamp distance
-  const clampedDistance = Math.min(distance, maxOffset);
-
-  // Reconstruct clamped vector
-  const pupilX = nx * clampedDistance;
-  const pupilY = ny * clampedDistance;
-
-  // Write to CSS variables
-  eye.style.setProperty("--pupil-x", `${pupilX}px`);
-  eye.style.setProperty("--pupil-y", `${pupilY}px`);
+  pupil.style.setProperty("--pupil-x", `${px}%`);
+  pupil.style.setProperty("--pupil-y", `${py}%`);
 }

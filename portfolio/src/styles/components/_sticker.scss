@@ -18,6 +18,7 @@ $eyes-url: url('/images/eyes.png');
 
     width: 100%;
     height: auto;
+    z-index: 9;
 }
 
 .eyes-sticker {
@@ -47,4 +48,18 @@ $eyes-url: url('/images/eyes.png');
         width: 25%;
         height: 25%;
     }
+}
+
+
+@media only screen and (min-width: 1200px) {
+    .eyes-sticker {
+        max-width: 580px;
+        max-height: auto;
+    }
+
+    // .eyes-container {
+    //     // top: 50%;
+    //     // left: 50%;
+    //     transform: translate(40%, 0%);
+    // }
 }

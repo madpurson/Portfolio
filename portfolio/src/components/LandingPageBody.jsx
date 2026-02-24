@@ -47,7 +47,7 @@ export function LandingPageBody() {
                 </div>
             </div>
             <div className="profile container column w-full items-end">
-                <h1 className="font-bold color-main primary-h1">
+                <h1 className="font-bold color-main primary-title">
                     Patrick Pelegrino. 
                 </h1>
                 <span className="primary-color secondary-sm">
@@ -62,12 +62,12 @@ export function LandingPageBody() {
                             I’m a software developer with a focus on backend systems, full-stack web development, and building real-world solutions. I enjoy working on meaningful projects that combine code, creativity, and impact.
                         </p>
                     </div> 
-                    <div className="flex px-4 grow mt-10 opacity-75 text-center row container action-buttons-container">
-                        <a className="flex primary-color secondary-body action-button" href="mailto:pelegrinompatrick@gmail.com">
-                            Hire me
+                    <div className="flex px-4 grow mt-10 text-center row container action-buttons-container">
+                        <a className="flex primary-color plain-text secondary-body action-button" href="mailto:pelegrinompatrick@gmail.com">
+                            <span>Hire me</span>
                         </a>
-                        <a className="flex primary-color secondary-body action-button" href="/files/Michael_Patrick_Pelegrino_Resume.pdf" target="_blank" rel="noopener noreferrer">
-                            Download resume
+                        <a className="flex primary-color plain-text secondary-body action-button" href="/cv/PatrickPelegrino-CV.pdf" target="_blank" rel="noopener noreferrer">
+                            <span>Download resume</span>
                         </a>
                     </div>
                 </div>

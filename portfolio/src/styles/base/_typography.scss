@@ -4,14 +4,23 @@ $font-primary: 'Dela Gothic', sans-serif;   // Display / identity
 $font-secondary: 'Didact Gothic', sans-serif; // Body / readable
 
 // font scales
+$fs-title: clamp(3rem, 6vw, 4rem);
 $fs-h1: clamp(2.5rem, 5vw, 3.5rem);
 $fs-h2: clamp(1.75rem, 3vw, 2.25rem);
 $fs-body: 1rem;
 $fs-sm: 0.875rem;
 
 // line heights
+$lh-super-tight: 0.9;
 $lh-tight: 1.1;
 $lh-normal: 1.6;
+
+.primary-title {
+  font-family: $font-primary !important;
+  font-size: $fs-title !important;
+  line-height: $lh-super-tight !important;
+  font-weight: 1000 !important;
+}
 
 .primary-h1 {
   font-family: $font-primary !important;
@@ -107,4 +116,7 @@ p {
   //   line-height: $text-caption-line;
   //   color: $ink-muted;
   // }
-  
+
+.plain-text {
+  text-decoration: none !important;
+}

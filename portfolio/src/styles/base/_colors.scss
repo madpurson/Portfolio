@@ -10,6 +10,12 @@ $board-color: #D9D9D9;
     background-color: var(--board-color);
 }
 
+body {
+    --board-color: #{$board-color};
+
+    background-color: var(--board-color);
+}
+
 .primary-color {
     color: $primary-color !important;
 }
@@ -26,6 +32,6 @@ $board-color: #D9D9D9;
     background-color: $secondary-color;
 }
 
-.boarder-color {
+.border-color {
     border-color: $primary-color;
 }

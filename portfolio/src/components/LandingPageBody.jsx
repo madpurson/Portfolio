@@ -64,7 +64,7 @@ export function LandingPageBody() {
                     </div> 
                     <div className="flex px-4 grow mt-10 text-center row container action-buttons-container">
                         <a className="flex primary-color plain-text secondary-body action-button" href="mailto:pelegrinompatrick@gmail.com">
-                            <span>Hire me</span>
+                            <span>Start a project</span>
                         </a>
                         <a className="flex primary-color plain-text secondary-body action-button" href="/cv/PatrickPelegrino-CV.pdf" target="_blank" rel="noopener noreferrer">
                             <span>Download resume</span>

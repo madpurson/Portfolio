@@ -14,8 +14,8 @@ function App() {
         {/* <NavPannel /> */}
         <LandingPageBody />
         <ProjectsPageBody />
-        <AboutPageBody />
-        <ContactPageBody />
+        {/* <AboutPageBody />
+        <ContactPageBody /> */}
       </div>
       
     </>

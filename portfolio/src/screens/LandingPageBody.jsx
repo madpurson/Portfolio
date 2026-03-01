@@ -47,7 +47,7 @@ export function LandingPageBody() {
                 </div>
             </div>
             <div className="profile container column w-full items-end">
-                <h1 className="font-bold color-main primary-title">
+                <h1 className="font-bold primary-color primary-title">
                     Patrick Pelegrino. 
                 </h1>
                 <span className="primary-color secondary-sm">

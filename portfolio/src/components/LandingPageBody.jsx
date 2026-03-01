@@ -59,7 +59,8 @@ export function LandingPageBody() {
                 <div className="text-start w-full pr-10 text-rose-50 col-mobile-row justify-center">
                     <div className="container intro-container">   
                         <p className="intro-text">
-                            I’m a software developer with a focus on backend systems, full-stack web development, and building real-world solutions. I enjoy working on meaningful projects that combine code, creativity, and impact.
+                            I build full-stack applications and the systems around them:
+                            CI/CD pipelines, tests, and data that needs a careful cleanup.
                         </p>
                     </div> 
                     <div className="flex px-4 grow mt-10 text-center row container action-buttons-container">

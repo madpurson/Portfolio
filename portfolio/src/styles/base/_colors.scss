@@ -1,6 +1,9 @@
 $primary-color: #9A0F18;
 $secondary-color: #1E1E1E;
 $board-color: #D9D9D9;
+$pale-color: #F5F5F5;
+$paper-color: #F9FBFF;
+$note-pad-color: #e7dbb9;
 
 #root {
     --primary-color: #{$primary-color};
@@ -34,4 +37,12 @@ body {
 
 .border-color {
     border-color: $primary-color;
+}
+
+.paper-bg {
+    background-color: $paper-color !important;
+}
+
+.note-pad-bg {
+    background-color: $note-pad-color !important;
 }

@@ -1,9 +1,20 @@
 /* layout/_board.scss */
 $space-xl: 4rem;
+$space-lg: 2rem;
+$space-md: 1rem;
 
 .board {
     position: relative;
-    padding: $space-xl;
+    padding: $space-md;
     min-height: 100vh;
+    width: 100%;
+    gap: $space-lg;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
   }
   
+@media only screen and (min-width: 768px) {
+    .board {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  
+}

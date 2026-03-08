@@ -1,13 +1,82 @@
 /* components/_paper.scss */
 $paper-warm: #fdf6e3;
+$paper-primary: #9A0F18;
 $shadow-paper: 0px 4px 6px rgba(0, 0, 0, 0.1), 0px 1px 3px rgba(0, 0, 0, 0.06);
+$space-md: 1rem;
 $space-lg: 2rem;
+$space-xl: 4rem;;
+
 
 .paper {
   background: $paper-warm;
-  padding: $space-lg;
+  padding: $space-md;
   box-shadow: $shadow-paper;
   transform: rotate(-1.5deg);
   text-align: left;
   position: absolute;
+}
+
+.write-up {
+  min-height: 200px !important;
+}
+
+.note-pad {
+  min-height: 150px !important;
+  max-width: 150px !important;
+}
+
+// positioning layout for paper component
+.project-container {
+  position: relative;
+  width: 100%;
+  min-height: 300px !important;
+  margin-bottom: $space-xl;
+  border: 1px solid red;
+}
+
+.title-paper {
+  @extend .paper;
+  background: $paper-primary !important;
+}
+
+.project-content:nth-child(1) {
+  transform: translate(-50%, -250%);
+  z-index: 110;
+
+}
+
+.project-content:nth-child(2) {
+  transform: translate(-90%, -50%);
+  z-index: 109;
+
+}
+
+.project-content:nth-child(3) {
+  transform: translate(-10%, -50%);
+  z-index: 108;
+
+}
+
+.project-content:nth-child(4) {
+  transform: translate(-20%, 10%);
+  z-index: 106;
+
+}
+
+.project-content:nth-child(5) {
+  transform: translate(-130%, 20%);
+  z-index: 105;
+
+}
+
+.project-content:nth-child(6) {
+  transform: translate(0%, 80%);
+  z-index: 104;
+
+}
+
+.project-content:nth-child(7) {
+  transform: translate(-100%, 100%);
+  z-index: 103;
+
 }

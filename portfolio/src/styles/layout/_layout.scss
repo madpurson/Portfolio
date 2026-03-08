@@ -5,6 +5,14 @@
     position: relative;
 }
 
+.page-header {
+    @extend .container;
+    justify-content: flex-start !important;
+    height: auto;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
 .page-body {
     @extend .container;
     flex-direction: column;

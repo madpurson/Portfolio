@@ -1,0 +1,34 @@
+/* abstracts/_typography-tokens.scss */
+
+/* Font families */
+$font-display: 'Dela Gothic', system-ui, sans-serif;
+$font-body: 'Didact Gothic', system-ui, sans-serif;
+
+/* Didact Gothic – reading */
+$text-body-size: 1rem;
+$text-body-line: 1.6;
+
+$text-lead-size: 1.125rem;
+$text-lead-line: 1.6;
+
+$text-small-size: 0.875rem;
+$text-small-line: 1.5;
+
+$text-caption-size: 0.75rem;
+$text-caption-line: 1.4;
+
+/* Dela Gothic – display */
+$display-hero-size: 3rem;
+$display-hero-line: 1.05;
+
+$display-page-size: 2.25rem;
+$display-page-line: 1.1;
+
+$display-project-size: 1.75rem;
+$display-project-line: 1.15;
+
+$display-label-size: 1.25rem;
+$display-label-line: 1.2;
+
+/* Optional tracking */
+$display-tracking-wide: 0.02em;

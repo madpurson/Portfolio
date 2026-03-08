@@ -1,5 +1,5 @@
 import React from "react";
-import projects from "../data/projects.json";
+import { projects } from "../assets/data/projects";
 
 export function ProjectsPageBody() {
     return (
@@ -10,12 +10,21 @@ export function ProjectsPageBody() {
                         Projects.
                     </h1>
                 </div>
-                <div className="grid grid-cols-3">
+                <div className="grid grid-cols-2 board">
                     {projects.map((project) => (
-                        <div className="container">
+                        <div className="container project-container" key={project.id}>
                             <a href={project.url}>
                                 <div className="w-9/10">
-                                    <img className="w-9/10 object-contain" src="/images/vector2.png" alt="projects" />
+                                    {/* <img className="w-9/10 object-contain" src="/images/vector2.png" alt="projects" /> */}
+                                    <ul className="project-body grid grid-cols-2 ">
+                                        <li className="project-content paper pale-color title-paper primary-cta">{project.title}</li>
+                                        <li className="project-content paper secondary-sm secondary-color write-up paper-bg">{project.description}</li>
+                                        <li className="project-content paper secondary-sm secondary-color write-up paper-bg">{project.responsibilities?.join(', ')}</li>
+                                        <li className="project-content paper secondary-sm secondary-color note-pad note-pad-bg">{project.techStack?.join(', ')}</li>
+                                        <li className="project-content paper secondary-sm secondary-color note-pad note-pad-bg">{project.tagline}</li>
+                                        <li className="project-content paper secondary-sm secondary-color">{project.problem}</li>
+                                        <li className="project-content paper secondary-sm secondary-color">{project.solution}</li>
+                                    </ul>
                                     <span className="primary-color secondary-cta">{project.name}.</span>
                                 </div>
                             </a>

@@ -16,13 +16,25 @@ $space-xl: 4rem;;
   position: absolute;
 }
 
+.paper:hover {
+  // transform: rotate(-1.5deg) !important;
+  background-color: #9A0F18 !important;
+  z-index: 111 !important;
+}
+
+.title-paper {
+  @extend .paper;
+  background: $paper-primary !important;
+}
+
 .write-up {
   min-height: 200px !important;
+  min-width: 200px !important;
 }
 
 .note-pad {
   min-height: 150px !important;
-  max-width: 150px !important;
+  max-width: 200px !important;
 }
 
 // positioning layout for paper component
@@ -30,13 +42,8 @@ $space-xl: 4rem;;
   position: relative;
   width: 100%;
   min-height: 300px !important;
-  margin-bottom: $space-xl;
+  margin-bottom: $space-md;
   border: 1px solid red;
-}
-
-.title-paper {
-  @extend .paper;
-  background: $paper-primary !important;
 }
 
 .project-content:nth-child(1) {
@@ -46,37 +53,96 @@ $space-xl: 4rem;;
 }
 
 .project-content:nth-child(2) {
-  transform: translate(-90%, -50%);
+  transform: translate(-70%, -50%);
   z-index: 109;
-
 }
 
 .project-content:nth-child(3) {
-  transform: translate(-10%, -50%);
-  z-index: 108;
-
+  display: none;
 }
 
 .project-content:nth-child(4) {
-  transform: translate(-20%, 10%);
+  transform: translate(-10%, -50%);
   z-index: 106;
-
 }
 
 .project-content:nth-child(5) {
-  transform: translate(-130%, 20%);
-  z-index: 105;
-
+  display: none;
 }
 
 .project-content:nth-child(6) {
-  transform: translate(0%, 80%);
-  z-index: 104;
-
+  display: none;
 }
 
 .project-content:nth-child(7) {
-  transform: translate(-100%, 100%);
-  z-index: 103;
+  display: none;
+}
 
+
+@media only screen and (min-width: 768px) {
+  
+  .write-up {
+    min-height: 200px !important;
+  }
+
+  .note-pad {
+    min-height: 150px !important;
+    max-width: 150px !important;
+  }
+
+  .project-content {
+    display: flex !important;
+  }
+
+  // positioning layout for paper component
+  .project-container {
+    position: relative;
+    width: 100%;
+    min-height: 300px !important;
+    margin-bottom: $space-xl;
+    border: 1px solid red;
+  }
+
+  .project-content:nth-child(1) {
+    transform: translate(-40%, -250%);
+    z-index: 110;
+
+  }
+
+  .project-content:nth-child(2) {
+    transform: translate(-80%, -50%);
+    z-index: 109;
+
+  }
+
+  .project-content:nth-child(3) {
+    transform: translate(0%, -50%);
+    z-index: 108;
+
+  }
+
+  .project-content:nth-child(4) {
+    transform: translate(-10%, 10%);
+    z-index: 106;
+
+  }
+
+  .project-content:nth-child(5) {
+    transform: translate(-100%, 20%);
+    z-index: 105;
+
+  }
+
+  .project-content:nth-child(6) {
+    transform: translate(10%, 80%);
+    z-index: 104;
+
+  }
+
+  .project-content:nth-child(7) {
+    transform: translate(-90%, 100%);
+    z-index: 103;
+
+  }
+  
 }

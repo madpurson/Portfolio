@@ -3,7 +3,7 @@
 Welcome to my portfolio repository! This is the codebase for my personal website, built to showcase my work, technical skills, and professional experience as a software developer.
 
 ## 🌐 Live Demo
-🔗 [Visit Portfolio Website](not yet launched)
+🔗 https://patricks-panopticon.vercel.app/
 
 ## 📌 About
 I'm Patrick Pelegrino, a passionate software developer with a focus on backend engineering, full-stack web development, and real-world problem-solving through technology. This portfolio highlights my projects, resume, and interests in areas like health tech, automation, and AI integration.

@@ -1,0 +1,68 @@
+// _eye.scss
+$eye-color: #fff;
+$pupil-color: #000;
+$right-eye-image: url('/images/right-eye.png');
+$left-eye-image: url('/images/left-eye.png');
+$eyes-url: url('/images/eyes.png');
+
+.eyes-container {
+  position: absolute;
+  inset: 0;
+  pointer-events: auto;
+  z-index: 10;
+  display: flex;
+  flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+  // height: fit-content;
+  // background-image: $eyes-url;
+}
+
+.eye {
+  --eye-radius: 8%;
+  --pupil-radius: 50%;
+  --pupil-max-offset: 12px;
+
+  position: relative;
+  // width is based from the eye radius, multiplied by 2 for diameter, and then multiplied by 2 for scaling [eye is rectangle]
+  width: calc(var(--eye-radius) * 2 * 2);
+  height: calc(var(--eye-radius) * 2);
+  // border-radius: 50%;
+  object-fit: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+// .eye--left {
+//   background-image: $left-eye-image;
+// }
+
+// .eye--right {
+//   background-image: $right-eye-image;
+// }
+
+.pupil {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+
+  // same logic as with eyes [adjusted for pupil radius and scaling]
+  width: calc(var(--pupil-radius) * 2 / 2);
+  height: calc(var(--pupil-radius) * 2);
+  border-radius: 50%;
+  object-fit: cover;
+
+  // transform: translate(
+  //   calc(0% + var(--pupil-x, 0px)),
+  //   calc(0% + var(--pupil-y, 0px))
+  // );
+  transform: translate(
+    calc(-50% + var(--pupil-x, 0%)),
+    calc(-50% + var(--pupil-y, 0%))
+  );
+
+  transition: transform 120ms ease-out;
+}

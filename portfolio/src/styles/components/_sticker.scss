@@ -1,0 +1,65 @@
+$eyes-url: url('/images/eyes.png');
+
+.sticker {
+    max-width: 100%;
+    height: auto;
+}
+
+.sticker {
+    // position: absolute;
+    // top: 0;
+    // left: 0;
+    // z-index: 5;
+    // width: 50%;
+    height: auto;
+}
+
+.sticker--main {
+
+    width: 100%;
+    height: auto;
+    z-index: 9;
+}
+
+.eyes-sticker {
+    --eyes-y: 10%;
+    
+    background-image: $eyes-url;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    top: var(--eyes-y);
+    width: 40%;
+    height: 40%;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 15px;
+}
+
+@media screen and (min-width: 600px) {
+    .eyes-sticker {
+        --eyes-y: 20%;
+
+        top: var(--eyes-y);
+        width: 25%;
+        height: 25%;
+    }
+}
+
+
+@media only screen and (min-width: 1200px) {
+    .eyes-sticker {
+        max-width: 580px;
+        max-height: auto;
+    }
+
+    // .eyes-container {
+    //     // top: 50%;
+    //     // left: 50%;
+    //     transform: translate(40%, 0%);
+    // }
+}

@@ -1,0 +1,9 @@
+/* layout/_board.scss */
+$space-xl: 4rem;
+
+.board {
+    position: relative;
+    padding: $space-xl;
+    min-height: 100vh;
+  }
+  

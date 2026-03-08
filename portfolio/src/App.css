@@ -1,11 +1,37 @@
+@font-face {
+  font-family: 'DeltaGothic';
+  src: url('/fonts/Dela_Gothic_One/DelaGothicOne-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@theme {
+  --color-dark-500: #3f3cbb;
+  --font-delta: 'DeltaGothic', sans-serif;
+}
+
 @import "tailwindcss";
 
+body {
+  background-color: #1E1E1E;
+}
 
 #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  background-color: #1E1E1E;
+  justify-content: center;
+  display: flex;
+}
+
+.color-main {
+  color: #BC1420;
+}
+
+.color-main-bg {
+  background-color: #DA1826;
 }
 
 .logo {

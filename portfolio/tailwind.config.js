@@ -18,6 +18,9 @@ export default {
         'bubble-gum': '#ff77e9',
         bermuda: '#78dcca',
       },
+      fontFamily: {
+        delta: ['DeltaGothic', 'sans-serif'],
+      },
     },
   },
   plugins: [],

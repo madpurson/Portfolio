@@ -1,0 +1,131 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.page-body {
+    @extend .container;
+    flex-direction: column;
+    height: auto;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+// row in mobile, column in desktop
+.row-mobile-col {
+    display: flex;
+    flex-direction: row;
+}
+
+.col-mobile-row {
+    display: flex;
+    flex-direction: column;
+}
+
+// .landing-page-body {
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: center;
+//     align-items: center;
+// }
+
+.landing-header {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.intro-container {
+    padding: 0 0.5rem;
+}
+
+.action-buttons-container {
+    margin: 2rem 0;
+    gap: 0.5rem;
+    text-align: center;
+    justify-content: space-evenly;
+}
+
+.profile {
+    margin: 1rem 0;
+}
+
+@media only screen and (min-width: 600px) {
+    .row-mobile-col {
+        flex-direction: column;
+    }
+    
+    .col-mobile-row {
+        flex-direction: row;
+    }
+
+    .landing-page-body {
+        display: flex;
+        flex-direction: column;
+        padding: 2rem;
+    }
+
+    .profile {
+        order: 2;
+        align-items: flex-start;
+        position: absolute;
+        bottom: 4rem;
+        left: 2rem;
+        z-index: 12;
+        width: 60%;
+    }
+
+    .landing-banner-container {
+        order: 1;
+        bottom: 2rem;
+    }
+
+    .landing-header {
+        order: 0;
+        margin-top: 1rem;
+    }
+
+    .profile span {
+        order: 0;
+    }
+
+    .profile h1 {
+        order: 1;
+        text-align: left;
+    }
+
+    .landing-banner-image, .eyes-sticker {
+        max-width: 400px;
+        max-height: auto;
+    }
+
+    // .eyes-container {
+    //     // top: 50%;
+    //     // left: 50%;
+    //     transform: translate(40%, 0%);
+    // }
+}
+
+
+@media only screen and (min-width: 1200px) {
+
+    .landing-banner-image {
+        max-width: 580px;
+        max-height: auto;
+    }
+
+    // .eyes-container {
+    //     // top: 50%;
+    //     // left: 50%;
+    //     transform: translate(40%, 0%);
+    // }
+}

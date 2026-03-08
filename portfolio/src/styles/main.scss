@@ -13,11 +13,11 @@
 
 
 /* layout */
-// @use './layout/board';
+@use './layout/board';
 @use './layout/layout';
 
 /* components */
 // @use './components/pin';
-// @use './components/paper';
+@use './components/paper';
 @use './components/eye';
 @use './components/sticker';

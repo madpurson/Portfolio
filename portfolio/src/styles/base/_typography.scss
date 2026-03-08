@@ -9,6 +9,7 @@ $fs-h1: clamp(2.5rem, 5vw, 3.5rem);
 $fs-h2: clamp(1.75rem, 3vw, 2.25rem);
 $fs-body: 1rem;
 $fs-sm: 0.875rem;
+$fs-cta: 0.875rem;
 
 // line heights
 $lh-super-tight: 0.9;
@@ -58,6 +59,15 @@ $lh-normal: 1.6;
   font-family: $font-secondary !important;
   font-size: $fs-sm !important;
   color: rgba(0, 0, 0, 0.6);
+  font-weight: 500 !important;
+}
+
+.secondary-cta {
+  font-family: $font-secondary !important;
+  font-size: $fs-cta !important;
+  color: rgba(0, 0, 0, 0.6);
+  text-decoration: none;
+  font-weight: 600 !important;
 }
 
 h1 {

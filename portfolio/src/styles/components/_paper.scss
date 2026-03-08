@@ -1,8 +1,13 @@
 /* components/_paper.scss */
+$paper-warm: #fdf6e3;
+$shadow-paper: 0px 4px 6px rgba(0, 0, 0, 0.1), 0px 1px 3px rgba(0, 0, 0, 0.06);
+$space-lg: 2rem;
 
 .paper {
   background: $paper-warm;
   padding: $space-lg;
   box-shadow: $shadow-paper;
   transform: rotate(-1.5deg);
+  text-align: left;
+  position: absolute;
 }

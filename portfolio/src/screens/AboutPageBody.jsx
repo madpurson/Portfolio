@@ -11,25 +11,25 @@ export function AboutPageBody() {
                     <div>
                         <ul className="grid grid-cols-2 board">
                             <li>
-                                <div className="container paper-container"><img className="paper" src="./images/About/back-facing-1.png" alt="" /></div>
+                                <div className="container picture-container"><img className="picture" src="./images/About/back-facing-1.png" alt="" /></div>
                             </li>
                             <li>
-                                <div className="container paper-container"><img className="paper" src="./images/About/back-facing.png" alt="" /></div>
+                                <div className="container picture-container"><img className="picture" src="./images/About/back-facing.png" alt="" /></div>
                             </li>
                             <li>
-                                <div className="container paper-container"><img className="paper" src="./images/About/front-facing.png" alt="" /></div>
+                                <div className="container picture-container"><img className="picture" src="./images/About/front-facing.png" alt="" /></div>
                             </li>
                             <li>
-                                <div className="container paper-container"><img className="paper" src="./images/About/left-facing.png" alt="" /></div>
+                                <div className="container picture-container"><img className="picture" src="./images/About/left-facing.png" alt="" /></div>
                             </li>
                             <li>
-                                <div className="container paper-container"><img className="paper" src="./images/About/right-facing.png" alt="" /></div>
+                                <div className="container picture-container"><img className="picture" src="./images/About/right-facing.png" alt="" /></div>
                             </li>
                             <li>
-                                <div className="container paper-container"><img className="paper" src="./images/About/front-facing-1.png" alt="" /></div>
+                                <div className="container picture-container"><img className="picture" src="./images/About/front-facing-1.png" alt="" /></div>
                             </li>
                             <li>
-                                <div className="container paper-container"><img className="paper" src="./images/About/front-facing-2.png" alt="" /></div>
+                                <div className="container picture-container"><img className="picture" src="./images/About/front-facing-2.png" alt="" /></div>
                             </li>
                         </ul>
                     </div>

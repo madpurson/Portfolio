@@ -1,0 +1,36 @@
+
+/* components/_picture.scss */
+$paper-warm: #fdf6e3;
+$paper-primary: #9A0F18;
+$shadow-paper: 0px 4px 6px rgba(0, 0, 0, 0.1), 0px 1px 3px rgba(0, 0, 0, 0.06);
+$space-md: 1rem;
+$space-lg: 2rem;
+$space-xl: 4rem;
+
+.picture {
+  background: $paper-warm;
+  padding: $space-md;
+  box-shadow: $shadow-paper;
+  transform: rotate(-1.5deg);
+  text-align: left;
+  position: absolute;
+  object-fit: contain;
+  height: 100%;
+  width: 100%;
+}
+
+.picture:hover {
+  transform: rotate(-1.5deg) !important;
+  // background-color: #9A0F18 !important;
+//   z-index: 111 !important;
+    
+}
+
+.picture-container {
+  position: relative;
+//   width: 100%;
+    display: flex;
+    flex: 1 1;
+  min-height: 300px !important;
+  min-width: 300px !important;
+}

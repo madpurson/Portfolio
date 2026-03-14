@@ -38,7 +38,7 @@ $space-xl: 4rem;;
 }
 
 // positioning layout for paper component
-.project-container {
+.project-container, .paper-container {
   position: relative;
   width: 100%;
   min-height: 300px !important;

@@ -8,11 +8,31 @@ export function AboutPageBody() {
                     </h1>
                 </div>
                 <div>
-                    <p>
-                        I’m a software developer with a focus on backend systems, 
-                        full-stack web development, and building real-world solutions. 
-                        I enjoy working on meaningful projects that combine code, creativity, and impact.
-                    </p>
+                    <div>
+                        <ul className="grid grid-cols-2 board">
+                            <li>
+                                <div className="container paper-container"><img className="paper" src="./images/About/back-facing-1.png" alt="" /></div>
+                            </li>
+                            <li>
+                                <div className="container paper-container"><img className="paper" src="./images/About/back-facing.png" alt="" /></div>
+                            </li>
+                            <li>
+                                <div className="container paper-container"><img className="paper" src="./images/About/front-facing.png" alt="" /></div>
+                            </li>
+                            <li>
+                                <div className="container paper-container"><img className="paper" src="./images/About/left-facing.png" alt="" /></div>
+                            </li>
+                            <li>
+                                <div className="container paper-container"><img className="paper" src="./images/About/right-facing.png" alt="" /></div>
+                            </li>
+                            <li>
+                                <div className="container paper-container"><img className="paper" src="./images/About/front-facing-1.png" alt="" /></div>
+                            </li>
+                            <li>
+                                <div className="container paper-container"><img className="paper" src="./images/About/front-facing-2.png" alt="" /></div>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </>

@@ -34,3 +34,22 @@ $space-xl: 4rem;
   min-height: 300px !important;
   min-width: 300px !important;
 }
+
+.picture-container::before {
+  content: "";
+  position: absolute;
+
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+
+  background: #e6e1d8;   /* paper / photo backing */
+  border-radius: 6px;
+
+  box-shadow: 
+    0 4px 10px rgba(0,0,0,0.15),
+    inset 0 0 0 2px rgba(0,0,0,0.05);
+
+  z-index: 0;
+}

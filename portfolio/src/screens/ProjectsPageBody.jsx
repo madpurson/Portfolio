@@ -1,6 +1,8 @@
 import React from "react";
 import { projects } from "../assets/data/projects";
 
+
+// TODO: Rework design to be a folder of project cards that can be clicked to open a detailed page about the project (with more images, write-up, etc.) instead of a grid of project summaries. This allows for a cleaner design and more in-depth presentation of each project without overwhelming the user with information on the main projects page.
 export function ProjectsPageBody() {
     return (
         <> 

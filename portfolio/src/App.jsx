@@ -15,7 +15,7 @@ function App() {
         <SpeedInsights />
         {/* <NavPannel /> */}
         <LandingPageBody />
-        <ProjectsPageBody />
+        {/* <ProjectsPageBody /> */}
         <AboutPageBody />
         {/* <ContactPageBody /> */}
       </div>

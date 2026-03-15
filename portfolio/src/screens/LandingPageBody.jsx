@@ -26,6 +26,9 @@ export function LandingPageBody() {
         tracker.destroy();
     };
     }, []);
+
+    // TODO: Add debounce for mouse movement and optimize eye rendering for better performance
+    // - Add a scotch-tape/note-pad png on the Download Resume button to highlight flow [also add a hover effect to the button]
     return (
         <div className="mt-10 page-body landing-page-body relative">
             <div id="patrick-container" className="w-full box-border landing-banner-container container">

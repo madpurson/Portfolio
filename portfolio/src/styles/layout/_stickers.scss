@@ -1,0 +1,18 @@
+
+.sticker-grid {
+    width: 30%;
+}
+
+.sticker-grid .grid {
+    gap: 0.5rem;
+}
+
+.about-page-body li {
+    position: relative;
+    display: flex;
+    width: 100%;
+}
+
+.about-page-body .sticker {
+    object-fit: cover;
+}

@@ -1,7 +1,30 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { projects } from "../assets/data/projects";
 
 export function ProjectsPageBody() {
+    const [isHovered, setIsHovered] = React.useState(false);
+
+    const addHoveredState = (component) => {
+        const folder = component.classList.add("hovered-folder");
+        const children = folder.children;
+        children.forEach((child) => {
+            child.classList.remove("unhovered-folder");
+        })
+        
+    }
+    const handleHover = (e) => {
+        const folder = e.currentTarget;
+        const tab = folder.querySelector(".folder");
+    }
+
+    useEffect(() => {
+        if (!isHovered) {
+            const folders = document.querySelectorAll(".folder");
+            folders[folders.length - 1].classList.add("hovered-folder");
+        }
+        const folders = document.querySelectorAll(".folder");
+    }, [isHovered]);
+
     return (
         <> 
             <div className="page-body">
@@ -10,24 +33,25 @@ export function ProjectsPageBody() {
                         Projects.
                     </h1>
                 </div>
-                <div className="grid grid-cols-2 board">
+                <div className="shelf">
                     {projects.map((project) => (
-                        <div className="container project-container" key={project.id}>
-                            <a href={project.url}>
-                                <div className="w-9/10">
+                        <div className="container" key={project.id}>
+                            
+                                <div className="folder">
                                     {/* <img className="w-9/10 object-contain" src="/images/vector2.png" alt="projects" /> */}
-                                    <ul className="project-body grid grid-cols-2 ">
-                                        <li className="project-content paper pale-color title-paper primary-cta">{project.title}</li>
-                                        <li className="project-content paper secondary-sm secondary-color write-up paper-bg">{project.description}</li>
-                                        <li className="project-content paper secondary-sm secondary-color write-up paper-bg">{project.responsibilities?.join(', ')}</li>
-                                        <li className="project-content paper secondary-sm secondary-color note-pad note-pad-bg">{project.techStack?.join(', ')}</li>
-                                        <li className="project-content paper secondary-sm secondary-color note-pad note-pad-bg">{project.tagline}</li>
-                                        <li className="project-content paper secondary-sm secondary-color">{project.problem}</li>
-                                        <li className="project-content paper secondary-sm secondary-color">{project.solution}</li>
-                                    </ul>
-                                    <span className="primary-color secondary-cta">{project.name}.</span>
+                                    
+                                    <span className="project-content folder-tab primary-cta primary-color">
+                                        <p>{project.title}</p>
+                                    </span>
+                                    <span className="folder-body">
+                                        <p className="secondary-color secondary-sm unhovered-children">{project.description}</p>
+                                        <p className="secondary-color secondary-sm unhovered-children">{project.techStack.join(", ")}</p>
+                                    </span>
+                                        
+                                 
+                                   
                                 </div>
-                            </a>
+                           
                         </div>
                     ))}
                 </div>

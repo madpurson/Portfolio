@@ -4,25 +4,34 @@ import { projects } from "../assets/data/projects";
 export function ProjectsPageBody() {
     const [isHovered, setIsHovered] = React.useState(false);
 
-    const addHoveredState = (component) => {
-        const folder = component.classList.add("hovered-folder");
+    const addHoveredState = (projectId) => {
+        if (!projectId) return;
+        setIsHovered(true);
+        const hoveredComponent = document.getElementById(projectId);
+        const allFolders = document.querySelectorAll(".folder");
+        allFolders.forEach((folder) => {
+            folder.classList.remove("hovered-folder");
+        });
+        const folder = hoveredComponent.classList.add("hovered-folder");
         const children = folder.children;
         children.forEach((child) => {
-            child.classList.remove("unhovered-folder");
+            child.classList.remove("unhovered-children");
         })
-        
     }
-    const handleHover = (e) => {
-        const folder = e.currentTarget;
-        const tab = folder.querySelector(".folder");
+
+    const handleHoverExit = (e) => {
+        setIsHovered(false);
     }
 
     useEffect(() => {
         if (!isHovered) {
             const folders = document.querySelectorAll(".folder");
+            const allFolders = document.querySelectorAll(".folder");
+            allFolders.forEach((folder) => {
+                folder.classList.remove("hovered-folder");
+            });
             folders[folders.length - 1].classList.add("hovered-folder");
         }
-        const folders = document.querySelectorAll(".folder");
     }, [isHovered]);
 
     return (
@@ -37,7 +46,7 @@ export function ProjectsPageBody() {
                     {projects.map((project) => (
                         <div className="container" key={project.id}>
                             
-                                <div className="folder">
+                                <div className="folder" onMouseEnter={() => addHoveredState(project.title)} onMouseLeave={handleHoverExit} id={project.title}>
                                     {/* <img className="w-9/10 object-contain" src="/images/vector2.png" alt="projects" /> */}
                                     
                                     <span className="project-content folder-tab primary-cta primary-color">

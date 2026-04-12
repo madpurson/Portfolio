@@ -26,13 +26,14 @@ export const ProjectDetails = () => {
                     <div className="opened-folder">
                         
                         <div className="opened-folder-content">
+                            <img src="/images/opened-folder.png" alt="opened-folder" className="opened-folder-image" />
                             <span className="left-side">
                                 <img className="binder-clip" src="/images/binder-clip.png" alt="binder-clip" />
 
-                                <div className="opened-folder-left-content"></div>
+                                <div className="left-content"></div>
                             </span>
                             <span className="right-side">
-                                <img src="/images/paper.png" alt={title} className="opened-folder-right-content"></img>
+                                <img src="/images/paper.png" alt={title} className="right-content paper-content"></img>
                             </span>
                         </div>
                     </div>

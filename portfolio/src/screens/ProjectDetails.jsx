@@ -24,12 +24,15 @@ export const ProjectDetails = () => {
                         </h1>
                     </div>
                     <div className="opened-folder">
+                        
                         <div className="opened-folder-content">
                             <span className="left-side">
+                                <img className="binder-clip" src="/images/binder-clip.png" alt="binder-clip" />
+
                                 <div className="opened-folder-left-content"></div>
                             </span>
                             <span className="right-side">
-                                <div className="opened-folder-right-content"></div>
+                                <img src="/images/paper.png" alt={title} className="opened-folder-right-content"></img>
                             </span>
                         </div>
                     </div>

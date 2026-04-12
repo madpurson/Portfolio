@@ -1,8 +1,10 @@
 import React, { useEffect } from "react";
 import { projects } from "../assets/data/projects";
+import { useNavigate } from "react-router-dom";
 
 export function ProjectsPageBody() {
     const [isHovered, setIsHovered] = React.useState(false);
+    const navigate = useNavigate();
 
     const addHoveredState = (projectId) => {
         if (!projectId) return;
@@ -21,6 +23,11 @@ export function ProjectsPageBody() {
 
     const handleHoverExit = (e) => {
         setIsHovered(false);
+    }
+
+    const handleNavigate = (projectId) => {
+        if (!projectId) return;
+        navigate(`/projects/${projectId}`);
     }
 
     useEffect(() => {
@@ -46,7 +53,7 @@ export function ProjectsPageBody() {
                     {projects.map((project) => (
                         <div className="container" key={project.id}>
                             
-                                <div className="folder" onMouseEnter={() => addHoveredState(project.title)} onMouseLeave={handleHoverExit} id={project.title}>
+                                <div className="folder" onClick={() => handleNavigate(project.id)} onMouseEnter={() => addHoveredState(project.title)} onMouseLeave={handleHoverExit} id={project.title}>
                                     {/* <img className="w-9/10 object-contain" src="/images/vector2.png" alt="projects" /> */}
                                     
                                     <span className="project-content folder-tab primary-cta primary-color">

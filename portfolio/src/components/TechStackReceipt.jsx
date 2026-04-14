@@ -102,9 +102,11 @@ const TechStackReceipt = ({
                 value={url}
                 viewBox={`0 0 256 256`}
               />
+              
             </div>
             </a>
           </div>
+          <span className='endfooter'>github.com/madupurson</span>
         </div>
 
         {/* Torn Edge Effect */}

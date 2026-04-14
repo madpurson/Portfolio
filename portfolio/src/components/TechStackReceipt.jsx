@@ -1,14 +1,33 @@
 import React from 'react';
+import QRCode from "react-qr-code"
 
 const dateFormatter = new Intl.DateTimeFormat('en-US', { month: 'long', day: '2-digit', year: 'numeric' });
+
+const barcodeCreator = (text) => {
+  try {
+    const canvas = document.createElement('canvas');
+    return bwip.toDataURL(canvas, {
+      bcid: 'code128',
+      text: text,
+      scale: 2,
+      height: 10
+    });
+  } catch (error) {
+    console.error('Error generating barcode:', error);
+    return null;
+  }
+};
+
 
 const TechStackReceipt = ({ 
   title = "ORDER #0042", 
   index = 0,
   items = [], 
   footerNote = "THANKS FOR VISITING",
-  date = dateFormatter.format(new Date()).toUpperCase() 
+  date = dateFormatter.format(new Date()).toUpperCase(),
+  url = "#"
 }) => {
+  // const qrCode = qrCodeCreator(url);
   return (
     <div className="flex justify-center p-8 bg-gray-200 min-h-[500px]">
       {/* Main Receipt Container */}
@@ -32,7 +51,7 @@ const TechStackReceipt = ({
               <span className='date'>{date}</span>
             </div>
             <div className="subheader-row">
-              <span>CASHIER</span>
+              <span>CASHIER:</span>
               <span className="cashier-name">PATRICK</span>
             </div>
           </div>
@@ -60,17 +79,31 @@ const TechStackReceipt = ({
         </div>
 
         {/* Footer / Totals Section */}
-        <div className="border-t border-dashed border-gray-400 pt-4 space-y-2">
-          <div className="flex justify-between font-bold text-sm">
-            <span>TOTAL SKILLS:</span>
-            <span>{items.length}</span>
+        <div className="receipt-footer">
+          <div className="receipt-table-footer">
+            <div className="receipt-table-footer-row">
+              <span>TOTAL SKILLS:</span>
+              <span>{`$${items.length.toFixed(2)}`}</span>
+            </div>
+            <div className="receipt-table-footer-row">
+              <span>TENDERED:</span>
+              <span>PROJECT</span>
+            </div>
           </div>
-          <span className="mt-4 text-center uppercase">
-            {footerNote}
+          <span className="footernote">
+            {`${footerNote.toUpperCase()} CLICK THE QR TO SEE MORE!`}
           </span>
-          <div className="flex justify-center py-2 opacity-80">
+          <div className="flex justify-center py-2 opacity-80 qr-code-container">
             {/* Simple Barcode Placeholder */}
-            <div className="h-8 w-full bg-[repeating-linear-gradient(90deg,black,black_2px,transparent_2px,transparent_4px)]"></div>
+            <a href={url}><div style={{ height: "auto", margin: "0 auto", maxWidth: 64, width: "100%" }}>
+              <QRCode
+                size={400}
+                style={{ height: "auto", maxWidth: "100%", width: "100%" }}
+                value={url}
+                viewBox={`0 0 256 256`}
+              />
+            </div>
+            </a>
           </div>
         </div>
 

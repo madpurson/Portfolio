@@ -1,3 +1,63 @@
+$gray: #333;
+
 .receipt-container {
     padding: 1rem;
+}
+
+.receipt-header {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    padding: 0.5rem 0;
+}
+
+.receipt-subheader {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    // font-size: clamp(0.6rem, 1vw, 0.875rem);
+    color: $gray;
+    margin-bottom: 0.25rem;
+    text-align: left;
+    gap: 0;
+}
+
+.subheader-row {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.25rem;
+}
+
+.tech-stack-table-header {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 400;
+    border-bottom: 1px dashed $gray;
+    border-top: 1px dashed $gray;
+    padding: 0.5rem 0;
+    width: 100%;
+    margin-bottom: 0.5rem;
+    color: $gray;
+}
+
+.techstack-table-item-header {
+    display: flex;
+    justify-content: space-between;
+    width: 85%;
+}
+
+.tech-stack-table-row {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 400;
+    padding: 0 0;
+    width: 100%;
+    margin-bottom: 0.5rem;
+    color: $gray;
+}
+
+.tech-stack-table-row .techstack-table-item-row {
+    display: flex;
+    justify-content: space-between;
+    width: 85%;
 }

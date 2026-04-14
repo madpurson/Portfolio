@@ -61,3 +61,39 @@ $gray: #333;
     justify-content: space-between;
     width: 85%;
 }
+
+.receipt-table-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    border-top: 1px dashed $gray;
+    border-bottom: 1px dashed $gray;
+    padding: 0.5rem 0;
+    padding-top: 0.5rem;
+}
+
+.receipt-table-footer-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.footernote {
+    display: block;
+    text-align: center;
+    font-size: 0.875rem;
+    color: $gray;
+    margin: 0.75rem 0;
+    font-weight: 400;
+}
+
+.qr-code-container {
+    display: flex;
+    justify-content: center;
+    padding: 1.25rem 0;
+}
+
+.endfooter {
+   color: $gray;
+   opacity: 0.9;
+}

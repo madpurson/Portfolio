@@ -1,10 +1,13 @@
 import React from 'react';
 
+const dateFormatter = new Intl.DateTimeFormat('en-US', { month: 'long', day: '2-digit', year: 'numeric' });
+
 const TechStackReceipt = ({ 
   title = "ORDER #0042", 
+  index = 0,
   items = [], 
   footerNote = "THANKS FOR VISITING",
-  date = new Date().toLocaleDateString() 
+  date = dateFormatter.format(new Date()).toUpperCase() 
 }) => {
   return (
     <div className="flex justify-center p-8 bg-gray-200 min-h-[500px]">
@@ -15,19 +18,40 @@ const TechStackReceipt = ({
         <div className="absolute inset-0 opacity-5 pointer-events-none bg-[url('https://www.transparenttextures.com/patterns/felt.png')]"></div>
 
         {/* Header Section */}
-        <div className="text-center border-b border-dashed border-gray-400 pb-4">
-          <h1 className="text-md font-bold uppercase tracking-widest">{title}</h1>
-          <p>{date}</p>
-          <p className="mt-1">***************************</p>
+        <div className="text-center pb-4 receipt-header">
+          <span className="secondary-h4">{title.toUpperCase()}</span>
+          <span>TECHNOLOGY STACK</span>
         </div>
+        
 
         {/* Content Area - Dynamic Mapping */}
         <div className="flex-1 space-y-2 py-2">
+          <div className="receipt-subheader">
+            <div className="subheader-row">
+              <span className="order-number">ORDER #{index}</span>
+              <span className='date'>{date}</span>
+            </div>
+            <div className="subheader-row">
+              <span>CASHIER</span>
+              <span className="cashier-name">PATRICK</span>
+            </div>
+          </div>
+          <div className="tech-stack-table-header">
+            <span>QTY</span>
+            <div className="techstack-table-item-header">
+            <span>ITEM</span>
+            <span>AMT</span>
+            </div>
+          </div>
+
           {items.length > 0 ? (
             items.map((item, index) => (
-              <div key={index} className="flex justify-between items-start">
-                <span className="uppercase">{item.name}</span>
-                <span className="text-gray-500">[{item.category || 'DEV'}]</span>
+              <div className="tech-stack-table-row" key={index}>
+                <span>{index}</span>
+                <div className="techstack-table-item-row">
+                  <span className="uppercase">{item.name}</span>
+                  <span className="text-gray-500">[{item.category || 'DEV'}]</span>
+                </div>
               </div>
             ))
           ) : (
@@ -41,9 +65,9 @@ const TechStackReceipt = ({
             <span>TOTAL SKILLS:</span>
             <span>{items.length}</span>
           </div>
-          <p className="mt-4 text-center uppercase leading-tight">
+          <span className="mt-4 text-center uppercase">
             {footerNote}
-          </p>
+          </span>
           <div className="flex justify-center py-2 opacity-80">
             {/* Simple Barcode Placeholder */}
             <div className="h-8 w-full bg-[repeating-linear-gradient(90deg,black,black_2px,transparent_2px,transparent_4px)]"></div>

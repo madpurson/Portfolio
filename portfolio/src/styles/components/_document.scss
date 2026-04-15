@@ -1,0 +1,82 @@
+
+.document-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    padding: 2rem;
+}
+
+.document-container .document-content {
+    position: absolute;
+    // opacity: 0.9;
+    z-index: 3;
+    left: 0;
+    transform: translateX(10%);
+}
+
+.overview-paper-content-overlay {
+    position: absolute;
+    width: 90%;
+    height: 100%;
+    top: 10%;
+    left: -1%;
+    transform: translateY(-10%);
+    
+    background-image: url('/images/paper.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 1 !important;
+
+}
+
+.document-content {
+    height: 80%;
+}
+
+.document-body {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.document-header, .document-section {
+    display: flex;
+    width: 350px;
+}
+
+.document-header {
+    flex-direction: column;
+    text-align: center;
+    margin: 4rem auto 3rem auto;
+}
+
+.document-section {
+    flex-direction: row;
+    text-align: left;
+    gap: 1rem;
+}
+
+.document-footer {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translate(1%, 150%);
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex-grow: 1 1;
+    flex-direction: column;
+    opacity: 0.9;
+}
+
+.document-footer hr {
+    width: 100%;
+}
+
+.page-number {
+    margin-right: 2%;
+}

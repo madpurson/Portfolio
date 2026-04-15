@@ -10,6 +10,7 @@ export const projects = [
     responsibilities: [
       "Designed and developed the full-stack web application using Next.js, TailwindCSS, MongoDB, Express, and Node.js.",
       "Implemented user authentication and shelter management features to allow shelters to create and manage pet profiles.",],
+    assets: "/images/Project/meowgaw.png",
     description:
       "MeowgAw is a third-party pet adoption service designed for campus shelters. It centralizes pet profiles and simplifies discovery for adopters through a clean, accessible interface."
   },
@@ -35,6 +36,7 @@ export const projects = [
       "Built a Next.js and TailwindCSS frontend for users to access curated health news.",
       "Developed a Flask backend to handle data processing and API endpoints.",
     ],
+    assets: "/images/Project/chiron.png",
     description:
       "CHIRON curates legitimate health news using automated scraping and machine-learning-based classification, prioritizing recall and credibility for public health awareness."
   },
@@ -52,6 +54,7 @@ export const projects = [
       "Designed and developed a Unity-based game that incorporates UPV-specific references and humor.",
       "Created original art assets and animations to enhance the gaming experience."
     ],
+    assets: "/images/Project/upv-pamplona.jpg",
     description:
       "UPV Pamplona is a culturally grounded game that familiarizes new students with UP Visayas through inside jokes, references, and playful mechanics."
   },
@@ -78,6 +81,7 @@ export const projects = [
       "Implemented a Node.js and Express backend to handle user authentication and voting logic.",
       "Designed and deployed Solidity smart contracts on the Ethereum blockchain to ensure secure and transparent vote recording."
     ],
+    assets: "/images/Project/ehalalan.svg",
     description:
       "eHalalan explores blockchain-based voting to improve transparency, voter trust, and system integrity for modern elections."
   },
@@ -95,6 +99,7 @@ export const projects = [
       "Designed and developed a Flutter mobile app that provides digital dice rolling and character sheet management for tabletop RPG players.",
       "Implemented Firebase backend services for user authentication and data storage."
     ],
+    assets: "/images/Project/dicedicedice.png",
     description:
       "DiceDiceDice streamlines tabletop gameplay by combining dice rolling, character tracking, and session utilities into one mobile app."
   },
@@ -112,6 +117,7 @@ export const projects = [
       "Designed and developed a multimedia website using HTML, CSS, JavaScript, PHP, and MySQL to present Filipino precolonial history.",
       "Curated historical content and created interactive timelines and exhibits to engage users."
     ],
+    assets: "/images/Project/katipunan.png",
     description:
       "Katipunan is an educational platform dedicated to showcasing Filipino precolonial history through interactive and narrative-driven content."
   }

@@ -4,6 +4,12 @@ $gray: #333;
     padding: 1rem;
 }
 
+// .receipt-container.shuffled {
+//     transform: rotate(1deg);
+//     box-shadow: 1px 3px 8px rgba(0, 0, 0, 0.2);
+//     z-index: 4 !important;
+// }
+
 .receipt-header {
     display: flex;
     flex-direction: column;
@@ -97,3 +103,32 @@ $gray: #333;
    color: $gray;
    opacity: 0.9;
 }
+
+
+.techstack-receipt {
+    position: absolute;
+    width: 50%;
+    z-index: 3;
+    display: none;
+}
+
+.project-image {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    margin-bottom: 1rem;
+    position: absolute;
+    z-index: 4;
+    top: 0;
+    left: 0;
+    transform: translateX(-10%);
+}
+
+.left-side .techstack-receipt.opened {
+    display: block !important;
+}
+
+.right-side .techstack-receipt.opened {
+    display: block !important; 
+}
+

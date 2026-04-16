@@ -7,10 +7,14 @@ $font-secondary: 'Didact Gothic', sans-serif; // Body / readable
 $fs-title: clamp(3rem, 6vw, 4rem);
 $fs-h1: clamp(2.5rem, 5vw, 3.5rem);
 $fs-h2: clamp(1.75rem, 3vw, 2.25rem);
+$fs-h3: clamp(1.25rem, 2vw, 1.75rem);
+$fs-h4: clamp(1rem, 1.5vw, 1.25rem);
 $fs-body: 1rem;
 $fs-sm: 0.875rem;
 $fs-cta: 0.875rem;
 $fs-cta-lg: 1rem;
+$fs-lg: clamp(1.25rem, 2vw, 1.75rem);
+$fs-md: clamp(1rem, 1.5vw, 1.25rem);
 
 // line heights
 $lh-super-tight: 0.9;
@@ -35,12 +39,45 @@ $lh-normal: 1.6;
   font-family: $font-primary !important;
   font-size: $fs-h2 !important;
   line-height: $lh-tight !important;
-  font-weight: 400 !important;
+  font-weight: 800 !important;
+}
+
+.primary-h3 {
+  font-family: $font-primary !important;
+  font-size: $fs-h3 !important;
+  line-height: $lh-tight !important;
+  font-weight: 800 !important;
+}
+
+.secondary-h3 {
+  font-family: $font-secondary !important;
+  font-size: $fs-h3 !important;
+  line-height: $lh-tight !important;
+  font-weight: 600 !important;
+}
+
+.secondary-h4 {
+  font-family: $font-secondary !important;
+  font-size: $fs-h4 !important;
+  line-height: $lh-tight !important;
+  font-weight: 600 !important;
 }
 
 .secondary-h2 {
   font-family: $font-secondary !important;
   font-size: $fs-h2 !important;
+  line-height: $lh-normal !important;
+}
+
+.secondary-lg {
+  font-family: $font-secondary !important;
+  font-size: $fs-lg !important;
+  line-height: $lh-normal !important;
+}
+
+.secondary-md {
+  font-family: $font-secondary !important;
+  font-size: $fs-md !important;
   line-height: $lh-normal !important;
 }
 

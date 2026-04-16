@@ -2,6 +2,10 @@ $gray: #333;
 
 .receipt-container {
     padding: 1rem;
+    cursor: pointer;
+    // position: absolute;
+    z-index: 3;
+    isolation: isolate;
 }
 
 // .receipt-container.shuffled {
@@ -109,7 +113,7 @@ $gray: #333;
     position: absolute;
     width: 50%;
     z-index: 3;
-    display: none;
+    display: block;
 }
 
 .project-image {
@@ -124,11 +128,6 @@ $gray: #333;
     transform: translateX(-10%);
 }
 
-.left-side .techstack-receipt.opened {
-    display: block !important;
-}
+.right-side .techstack-receipt {
 
-.right-side .techstack-receipt.opened {
-    display: block !important; 
 }
-

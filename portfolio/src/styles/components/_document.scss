@@ -3,8 +3,9 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    z-index: 2;
+    // z-index: 2;
     padding: 2rem;
+    isolation: isolate;
 }
 
 .document-container .document-content {
@@ -27,7 +28,7 @@
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    z-index: 1 !important;
+    // z-index: 1 !important;
 
 }
 

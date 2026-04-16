@@ -5,6 +5,7 @@ import TechStackReceipt from "../components/TechStackReceipt";
 import OverviewPaperDocument from "../components/OverviewPaperDocument";
 import ClippedPhoto from "../components/ClippedPhoto";
 import React from "react";
+import PaperClip from '../assets/svg/paper-clip.svg?react';
 
 export const ProjectDetails = () => {
     const { id } = useParams();
@@ -21,6 +22,14 @@ export const ProjectDetails = () => {
     const [isReceiptShuffled, setIsReceiptShuffled] = React.useState(false);
     const [isReceiptOpen, setIsReceiptOpen] = React.useState(false);
 
+    const receiptStackShuffleHandler = () => {
+        console.log("is this triggered now")
+        console.log('STATE INT HE PARENT', isReceiptShuffled)
+        setIsReceiptShuffled(prev => !prev);
+    }
+
+    
+
 
     return (
         <>
@@ -32,64 +41,83 @@ export const ProjectDetails = () => {
                             {`${title}.`}
                         </h1>
                     </div>
+                    
                     <div className="opened-folder">
                         
                         <div className="opened-folder-content">
                             <img src="/images/opened-folder.png" alt="opened-folder" className="opened-folder-image" />
                             <span className="left-side">
                                 <img className="binder-clip" src="/images/binder-clip.png" alt="binder-clip" />
-
-                                <div className="left-content">
-                                    
-                                </div>
                                 
-                                   
-                                <div onClick={() => setIsReceiptOpen(true)} className={"techstack-receipt right-techstack " + (isReceiptOpen ? "opened" : "")}>
-                                   <ClippedPhoto 
-                                //    shuffled={"shuffled"}
-                                //    handleShuffle={() => setIsReceiptShuffled(!isReceiptShuffled)}
-                                    imagePath={projectDetails.assets} 
-                                    projectName={title}
-                                    />
-                                    <TechStackReceipt 
-                                    // shuffled={"shuffled"}
-                                    // handleShuffle={() => setIsReceiptShuffled(!isReceiptShuffled)}
-                                    title={title} 
-                                    index={projectIndex}
-                                    items={projectDetails.techStack.map((tech) => ({ name: tech }))} 
-                                    footerNote="WE LOVE TO HEAR FROM YOU!" 
-                                    url={url || PERSONAL_GITHUB_URL}
-                                    />
-                                </div>
+                                {/* {isReceiptOpen && (
+                                    <div className="paper-clip-container">
+                                        <PaperClip />
+                                    </div>
+                                )} */}
+                                {isReceiptOpen && (
+                                    <div className="techstack-receipt">
+                                        <div className="paper-clip-container">
+                                            <PaperClip className="paper-clip" />
+                                        </div>
+                                        <ClippedPhoto 
+                                            shuffled={isReceiptShuffled}
+                                            handleShuffle={receiptStackShuffleHandler}
+                                            imagePath={projectDetails.assets} 
+                                            projectName={title}
+                                        />
+                                        <TechStackReceipt 
+                                            shuffled={isReceiptShuffled}
+                                            handleShuffle={receiptStackShuffleHandler}
+                                            title={title} 
+                                            index={projectIndex}
+                                            items={projectDetails.techStack.map((tech) => ({ name: tech }))} 
+                                            footerNote="WE LOVE TO HEAR FROM YOU!" 
+                                            url={url || PERSONAL_GITHUB_URL}
+                                        />
+                                    </div>
+                                )}
                                 
                             </span>
+                            
                             <span className="right-side">
-                                {/* <img src="/images/paper.png" alt={title} className="right-content paper-content"></img> */}
+                                {/* <PaperClip className="paper-clip" /> */}
                                 <OverviewPaperDocument 
-                                referenceId={`ORDER #0${projectIndex + 1}`}
-                                title={title}
-                                label={tagline}
-                                date={new Date().toLocaleDateString()}
-                                problemStatement={problem || "Problem statement not provided."}
-                                solutionStatement={solution || "Solution statement not provided."}
-                                projectSummary={description || "Project summary not provided."}
-                               
+                                    referenceId={`ORDER #0${projectIndex + 1}`}
+                                    title={title}
+                                    label={tagline}
+                                    date={new Date().toLocaleDateString()}
+                                    problemStatement={problem || "Problem statement not provided."}
+                                    solutionStatement={solution || "Solution statement not provided."}
+                                    projectSummary={description || "Project summary not provided."}
                                 />
-                                <div onClick={() => setIsReceiptOpen(true)} className={"techstack-receipt right-techstack " + (isReceiptOpen ? "" : "opened")}>
-                                   <ClippedPhoto 
-                                   
-                                    imagePath={projectDetails.assets} 
-                                    projectName={title}
-                                    />
-                                    <TechStackReceipt 
-                                   
-                                    title={title} 
-                                    index={projectIndex}
-                                    items={projectDetails.techStack.map((tech) => ({ name: tech }))} 
-                                    footerNote="WE LOVE TO HEAR FROM YOU!" 
-                                    url={url || PERSONAL_GITHUB_URL}
-                                    />
-                                </div>
+                                {/* {!isReceiptOpen && 
+                                    (<div className="paper-clip-container">
+                                        <PaperClip />
+                                    </div>
+                                )} */}
+                                
+                                {!isReceiptOpen && (
+                                    <div onClick={() => setIsReceiptOpen(true)} className="techstack-receipt">
+                                        <div className="paper-clip-container">
+                                            <PaperClip className="paper-clip" />
+                                        </div>
+                                        <ClippedPhoto 
+                                            shuffled={isReceiptShuffled}
+                                            handleShuffle={receiptStackShuffleHandler}
+                                            imagePath={projectDetails.assets} 
+                                            projectName={title}
+                                        />
+                                        <TechStackReceipt 
+                                            shuffled={isReceiptShuffled}
+                                            handleShuffle={receiptStackShuffleHandler}
+                                            title={title} 
+                                            index={projectIndex}
+                                            items={projectDetails.techStack.map((tech) => ({ name: tech }))} 
+                                            footerNote="WE LOVE TO HEAR FROM YOU!" 
+                                            url={url || PERSONAL_GITHUB_URL}
+                                        />
+                                    </div>
+                                )}
                             </span>
                         </div>
                     </div>

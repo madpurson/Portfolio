@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import QRCode from "react-qr-code"
 
 const dateFormatter = new Intl.DateTimeFormat('en-US', { month: 'long', day: '2-digit', year: 'numeric' });
@@ -25,19 +25,35 @@ const TechStackReceipt = ({
   items = [], 
   footerNote = "THANKS FOR VISITING",
   date = dateFormatter.format(new Date()).toUpperCase(),
-  url = "#"
+  url = "#",
+  handleShuffle = () => {},
+  shuffled = false
 }) => {
-  // const qrCode = qrCodeCreator(url);
+  const [shuffleDeg, setShuffleDeg] = useState(0);
+  const handleReceiptShuffle = () => {
+    
+    const deg = (Math.random() * 10 - 5).toFixed(2);
+    setShuffleDeg(deg);
+    handleShuffle()
+  }
+
   return (
     <div className="flex justify-center p-8 bg-gray-200 min-h-[500px]">
       {/* Main Receipt Container */}
-      <div className="receipt-container relative w-72 bg-white shadow-xl p-6 font-mono text-xs text-gray-800 flex flex-col gap-4 overflow-hidden">
+      <div 
+      style={{ transform: `rotate(${shuffleDeg}deg)`, zIndex: `${shuffled ? 4 : 3}` }}
+      className="receipt-container relative w-72 bg-white p-6 font-mono text-xs text-gray-800 flex flex-col gap-4 overflow-hidden" 
+      onClick={(e)=>{
+        // e.stopPropagation();
+
+        handleReceiptShuffle();
+      }}>
         
         {/* Paper Texture Overlay */}
-        <div className="absolute inset-0 opacity-5 pointer-events-none bg-[url('https://www.transparenttextures.com/patterns/felt.png')]"></div>
+        {/* <div className="absolute inset-0 opacity-5 pointer-events-none bg-[url('https://www.transparenttextures.com/patterns/felt.png')]"></div> */}
 
         {/* Header Section */}
-        <div className="text-center pb-4 receipt-header">
+        <div  className="text-center pb-4 receipt-header">
           <span className="secondary-h4">{title.toUpperCase()}</span>
           <span>TECHNOLOGY STACK</span>
         </div>
@@ -110,9 +126,9 @@ const TechStackReceipt = ({
         </div>
 
         {/* Torn Edge Effect */}
-        <div className="absolute -bottom-1 left-0 right-0 h-4 bg-white" 
+        {/* <div className="absolute -bottom-1 left-0 right-0 h-4 bg-white" 
              style={{ clipPath: "polygon(0% 0%, 5% 100%, 10% 0%, 15% 100%, 20% 0%, 25% 100%, 30% 0%, 35% 100%, 40% 0%, 45% 100%, 50% 0%, 55% 100%, 60% 0%, 65% 100%, 70% 0%, 75% 100%, 80% 0%, 85% 100%, 90% 0%, 95% 100%, 100% 0%)" }}>
-        </div>
+        </div> */}
       </div>
     </div>
   );

@@ -1,3 +1,18 @@
+$font-source-serif: 'Source Serif 4', serif;
+
+// font scales
+$fs-semibold: clamp(1rem, 1.5vw, 1.25rem);
+$fs-body: 1rem;
+$fs-sm: 0.875rem;
+$fs-cta: 0.875rem;
+$fs-cta-lg: 1rem;
+$fs-md: clamp(1rem, 1.5vw, 1.25rem);
+$fs-sidenote: clamp(0.7rem, 0.875rem, 0.975rem);
+
+// line heights
+$lh-super-tight: 0.9;
+$lh-tight: 1.1;
+$lh-normal: 1.6;
 
 .document-container {
     position: absolute;
@@ -6,6 +21,8 @@
     // z-index: 2;
     padding: 2rem;
     isolation: isolate;
+    font-family: $font-source-serif;
+    opacity: 0.9;
 }
 
 .document-container .document-content {
@@ -46,12 +63,47 @@
 .document-header, .document-section {
     display: flex;
     width: 350px;
+    padding: 0.5rem 0;
 }
 
 .document-header {
     flex-direction: column;
     text-align: center;
-    margin: 4rem auto 3rem auto;
+    margin: 1rem auto 1rem auto;
+}
+
+.headnotes-container, .subheader-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.headnotes-container {
+    font-weight: 400;
+    justify-content: flex-end;
+    align-items: flex-end;
+    gap: 0.5rem;
+}
+
+.headnotes-container span {
+    width: fit-content;
+    font-size: $fs-sidenote;
+    line-height: $lh-tight;
+}
+
+.subheader-container {
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.document-title {
+    font-size: $fs-semibold;
+    line-height: $lh-normal;
+    width: 100%;
+}
+
+.document-label, .document-section-title {
+    font-weight: 500;
 }
 
 .document-section {
@@ -78,6 +130,8 @@
     width: 100%;
 }
 
-.page-number {
+.page-number, .headnotes-container {
+    margin-top: 0.25rem;
     margin-right: 2%;
+    font-size: $fs-sidenote;
 }

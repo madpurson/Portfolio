@@ -128,51 +128,6 @@ p {
   @extend .secondary-body;
 }
 
-// body {
-//     font-family: $font-secondary;
-//     font-size: 1rem;
-//     line-height: 1.5;
-//     color: #1E1E1E;
-//     background: $paper-base;
-//   }
-  
-  /* Display */
-  // .display-hero {
-  //   font-family: $font-display;
-  //   font-size: $display-hero-size;
-  //   line-height: $display-hero-line;
-  // }
-  
-  // .display-page {
-  //   font-family: $font-display;
-  //   font-size: $display-page-size;
-  //   line-height: $display-page-line;
-  // }
-  
-  // .project-title {
-  //   font-family: $font-display;
-  //   font-size: $display-project-size;
-  //   line-height: $display-project-line;
-  // }
-  
-  // /* Reading */
-  // .lead {
-  //   font-size: $text-lead-size;
-  //   line-height: $text-lead-line;
-  // }
-  
-  // .meta {
-  //   font-size: $text-small-size;
-  //   line-height: $text-small-line;
-  //   color: $ink-muted;
-  // }
-  
-  // .caption {
-  //   font-size: $text-caption-size;
-  //   line-height: $text-caption-line;
-  //   color: $ink-muted;
-  // }
-
 .plain-text {
   text-decoration: none !important;
 }

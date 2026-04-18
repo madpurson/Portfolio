@@ -1,4 +1,5 @@
 $gray: #333;
+$font-mono: 'IBM Plex Mono', monospace;
 
 .receipt-container {
     padding: 1rem;
@@ -8,6 +9,7 @@ $gray: #333;
     isolation: isolate;
     overflow: visible;
     box-shadow: 1px 3px 6px rgba(0, 0, 0, 0.1);
+    font-family: $font-mono;
 }
 
 // .receipt-container.shuffled {

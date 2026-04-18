@@ -11,6 +11,7 @@ export const projects = [
       "Designed and developed the full-stack web application using Next.js, TailwindCSS, MongoDB, Express, and Node.js.",
       "Implemented user authentication and shelter management features to allow shelters to create and manage pet profiles.",],
     assets: "/images/Project/meowgaw.png",
+    positions: ["fullstack", "Devops", "product lead"],
     description:
       "MeowgAw is a third-party pet adoption service designed for campus shelters. It centralizes pet profiles and simplifies discovery for adopters through a clean, accessible interface."
   },
@@ -37,6 +38,7 @@ export const projects = [
       "Developed a Flask backend to handle data processing and API endpoints.",
     ],
     assets: "/images/Project/chiron.png",
+    positions: ["fullstack", "Devops", "product lead", "data engineer"],
     description:
       "CHIRON curates legitimate health news using automated scraping and machine-learning-based classification, prioritizing recall and credibility for public health awareness."
   },
@@ -55,6 +57,7 @@ export const projects = [
       "Created original art assets and animations to enhance the gaming experience."
     ],
     assets: "/images/Project/upv-pamplona.jpg",
+    positions: ["fullstack", "product lead"],
     description:
       "UPV Pamplona is a culturally grounded game that familiarizes new students with UP Visayas through inside jokes, references, and playful mechanics."
   },
@@ -82,6 +85,7 @@ export const projects = [
       "Designed and deployed Solidity smart contracts on the Ethereum blockchain to ensure secure and transparent vote recording."
     ],
     assets: "/images/Project/ehalalan.svg",
+    positions: ["fullstack", "Devops"],
     description:
       "eHalalan explores blockchain-based voting to improve transparency, voter trust, and system integrity for modern elections."
   },
@@ -100,6 +104,7 @@ export const projects = [
       "Implemented Firebase backend services for user authentication and data storage."
     ],
     assets: "/images/Project/dicedicedice.png",
+    positions: ["fullstack", "Devops", "product lead"],
     description:
       "DiceDiceDice streamlines tabletop gameplay by combining dice rolling, character tracking, and session utilities into one mobile app."
   },
@@ -118,6 +123,7 @@ export const projects = [
       "Curated historical content and created interactive timelines and exhibits to engage users."
     ],
     assets: "/images/Project/katipunan.png",
+    positions: ["fullstack", "Devops"],
     description:
       "Katipunan is an educational platform dedicated to showcasing Filipino precolonial history through interactive and narrative-driven content."
   }

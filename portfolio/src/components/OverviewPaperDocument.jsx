@@ -8,8 +8,7 @@ const OverviewPaperDocument = ({
   problemStatement = "How can we leverage cutting-edge technologies to create innovative solutions",
   solutionStatement = "By harnessing the power of AI, IoT, and blockchain.", 
   projectSummary = "This project explores the integration of AI, IoT, and blockchain.",
-  responsibilities = "fullstack",
-  id = 1
+  positions = "fullstack",
 }) => {
   return (
     <div className="document-container">
@@ -18,34 +17,37 @@ const OverviewPaperDocument = ({
         <div className="document-header secondary-color">
           <div className="headnotes-container">
             <span className="document-reference">{referenceId}</span>
-            <span className="document-date">{date}</span>
           </div>
           <div className="subheader-container">
             <span className="document-title">PROJECT REPORT</span>
             
             <div className="document-form-table">
-              <table>
-                <tbody>
-                  <tr>
-                    <td className='row-title'>SUBJECT</td>
-                    <td className="subject row-body">{title.toUpperCase()}</td>
+                <div className='table-body'>
+                  <span className="document-table-row">
+                    <div className="subrow">
+                      <span className='row-title'>SUBJECT</span>
+                      <span className="subject row-body">{title.toUpperCase()}</span>
+                    </div>
+                    <div className="subrow">
+                      <span className='row-title'>TYPE</span>
+                      <span className="row-body">ACADEMIC</span>
+                    </div>
+                    <div className="subrow">
+                      <span className='row-title'>DATE</span>
+                      <span className="row-body"><span className="document-date">{date}</span></span>
+                    </div>
+                  </span>
 
-                    <td className='row-title'>TYPE</td>
-                    <td className="row-body">ACADEMIC</td>
-                    
-                  </tr>
+                  <span className="document-table-row">
+                    <span className='row-title'>ABSTRACT</span>
+                    <span colSpan={6} className='document-label row-body'>{label.toUpperCase()}</span>
+                  </span>
 
-                  <tr>
-                    <td colSpan={2} className='row-title'>ABSTRACT</td>
-                    <td colSpan={2} className='document-label row-body'>{label.toUpperCase()}</td>
-                  </tr>
-
-                  <tr>
-                    <td colSpan={2} className='row-title'>RESPONSIBILITIES</td>
-                    <td colSpan={2} className='row-body'>{responsibilities.toUpperCase()}</td>
-                  </tr>
-                </tbody>
-              </table>
+                  <span className="document-table-row">
+                    <span className='row-title'>RESPONSIBILITY</span>
+                    <span colSpan={6} className='row-body'>{positions.toUpperCase()}</span>
+                  </span>
+                </div>
             </div>
           </div>
 

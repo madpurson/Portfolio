@@ -82,13 +82,14 @@ export const ProjectDetails = () => {
                             <span className="right-side">
                                 {/* <PaperClip className="paper-clip" /> */}
                                 <OverviewPaperDocument 
-                                    referenceId={`ORDER #0${projectIndex + 1}`}
+                                    referenceId={`#0${projectIndex + 1}234567`}
                                     title={title}
                                     label={tagline}
                                     date={new Date().toLocaleDateString()}
                                     problemStatement={problem || "Problem statement not provided."}
                                     solutionStatement={solution || "Solution statement not provided."}
                                     projectSummary={description || "Project summary not provided."}
+                                    positions={projectDetails.positions.join(', ')}
                                 />
                                 {/* {!isReceiptOpen && 
                                     (<div className="paper-clip-container">

@@ -1,6 +1,20 @@
 $gray: #333;
 $font-mono: 'IBM Plex Mono', monospace;
 
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    91% { transform: translate(-1px, -2px) rotate(-1deg); }
+    92% { transform: translate(-3px, 0px) rotate(1deg); }
+    93% { transform: translate(3px, 2px) rotate(0deg); }
+    94% { transform: translate(1px, -1px) rotate(1deg); }
+    95% { transform: translate(-1px, 2px) rotate(-1deg); }
+    96% { transform: translate(-3px, 1px) rotate(0deg); }
+    97% { transform: translate(3px, 1px) rotate(-1deg); }
+    98% { transform: translate(-1px, -1px) rotate(1deg); }
+    99% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
 .receipt-container {
     padding: 1rem;
     cursor: pointer;
@@ -130,6 +144,11 @@ $font-mono: 'IBM Plex Mono', monospace;
     top: 0;
     left: 0;
     transform: translateX(-10%);
+}
+
+.footernote {
+    animation: shake 3s;
+    animation-iteration-count: infinite;
 }
 
 // .torn-edge {

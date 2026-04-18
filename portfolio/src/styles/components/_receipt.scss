@@ -6,6 +6,8 @@ $gray: #333;
     // position: absolute;
     z-index: 3;
     isolation: isolate;
+    overflow: visible;
+    box-shadow: 1px 3px 6px rgba(0, 0, 0, 0.1);
 }
 
 // .receipt-container.shuffled {
@@ -128,6 +130,7 @@ $gray: #333;
     transform: translateX(-10%);
 }
 
-.right-side .techstack-receipt {
-
-}
+// .torn-edge {
+//     z-index: 100;
+//     bottom: -1rem;
+// }

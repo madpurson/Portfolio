@@ -38,7 +38,7 @@ const TechStackReceipt = ({
   }
 
   return (
-    <div className="flex justify-center p-8 bg-gray-200 min-h-[500px]">
+    <div className="flex justify-center p-8 min-h-[500px]">
       {/* Main Receipt Container */}
       <div 
       style={{ transform: `rotate(${shuffleDeg}deg)`, zIndex: `${shuffled ? 4 : 3}` }}
@@ -126,9 +126,9 @@ const TechStackReceipt = ({
         </div>
 
         {/* Torn Edge Effect */}
-        {/* <div className="absolute -bottom-1 left-0 right-0 h-4 bg-white" 
+        <div className="torn-edge absolute -bottom-1 left-0 right-0 h-4 bg-white" 
              style={{ clipPath: "polygon(0% 0%, 5% 100%, 10% 0%, 15% 100%, 20% 0%, 25% 100%, 30% 0%, 35% 100%, 40% 0%, 45% 100%, 50% 0%, 55% 100%, 60% 0%, 65% 100%, 70% 0%, 75% 100%, 80% 0%, 85% 100%, 90% 0%, 95% 100%, 100% 0%)" }}>
-        </div> */}
+        </div>
       </div>
     </div>
   );

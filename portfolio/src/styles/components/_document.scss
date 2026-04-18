@@ -23,6 +23,8 @@ $lh-normal: 1.6;
     isolation: isolate;
     font-family: $font-source-serif;
     opacity: 0.9;
+    line-height: $lh-tight;
+    font-size: $fs-sm;
 }
 
 .document-container .document-content {
@@ -57,13 +59,13 @@ $lh-normal: 1.6;
     margin-top: 1rem;
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
+    // gap: 0.5rem;
 }
 
 .document-header, .document-section {
     display: flex;
     width: 350px;
-    padding: 0.5rem 0;
+    padding: 0.25rem 0.5rem;
 }
 
 .document-header {
@@ -104,6 +106,32 @@ $lh-normal: 1.6;
 
 .document-label, .document-section-title {
     font-weight: 500;
+}
+
+// .document-form-table tr {
+//   width: 100%;
+//   border: 1px solid #333;
+//   border-collapse: collapse;
+// }
+.document-form-table td {
+  border: 1px solid #333;
+  padding: 0.25rem;
+  text-align: left;
+//   vertical-align: top;
+}
+
+.document-form-table tr {
+    flex-grow: 1 1;
+}
+
+.row-title {
+    border-right: none !important;
+    width: auto;
+    
+}
+
+.row-body {
+    border-left: none !important;
 }
 
 .document-section {

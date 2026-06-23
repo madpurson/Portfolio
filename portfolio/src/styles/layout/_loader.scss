@@ -1,0 +1,30 @@
+@keyframes popIn {
+  0% {
+    transform: scale(0.8);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scale(4);
+    opacity: 0.8;
+  }
+
+  100% {
+    transform: scale(2);
+    opacity: 1;
+  }
+}
+
+.loader-container {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 100;
+}
+
+.loader-container img {
+    object-fit: contain;
+    position: absolute;
+}

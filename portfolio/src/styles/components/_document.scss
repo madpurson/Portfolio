@@ -1,0 +1,202 @@
+$font-source-serif: 'Source Serif 4', serif;
+$primary-color: #9A0F18;
+
+// font scales
+$fs-semibold: clamp(1rem, 1.5vw, 1.25rem);
+$fs-body: 1rem;
+$fs-sm: 0.875rem;
+$fs-cta: 0.875rem;
+$fs-cta-lg: 1rem;
+$fs-md: clamp(1rem, 1.5vw, 1.25rem);
+$fs-sidenote: clamp(0.7rem, 0.875rem, 0.975rem);
+$fs-document-title: clamp(0.5rem, 0.7rem, 0.875rem);
+
+// line heights
+$lh-super-tight: 0.9;
+$lh-tight: 1.1;
+$lh-normal: 1.6;
+
+.document-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    // z-index: 2;
+    padding: 2rem;
+    isolation: isolate;
+    font-family: $font-source-serif;
+    opacity: 0.9;
+    line-height: $lh-tight;
+    font-size: $fs-sm;
+}
+
+.document-container .document-content {
+    position: absolute;
+    // opacity: 0.9;
+    z-index: 3;
+    left: 0;
+    transform: translateX(10%);
+}
+
+.overview-paper-content-overlay {
+    position: absolute;
+    width: 90%;
+    height: 100%;
+    top: 10%;
+    left: -1%;
+    transform: translateY(-10%);
+    
+    background-image: url('/images/paper.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    // z-index: 1 !important;
+
+}
+
+.document-content {
+    height: 80%;
+}
+
+.document-reference {
+    color: $primary-color;
+    opacity: 0.9;
+}
+
+.document-body {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    // gap: 0.5rem;
+}
+
+.document-header, .document-section {
+    display: flex;
+    width: 350px;
+    padding: 0.25rem 0.5rem;
+}
+
+.document-header {
+    flex-direction: column;
+    text-align: center;
+    margin: 1rem auto 1rem auto;
+}
+
+.headnotes-container, .subheader-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.headnotes-container {
+    font-weight: 400;
+    justify-content: flex-end;
+    align-items: flex-end;
+    gap: 0.5rem;
+}
+
+.headnotes-container span {
+    width: fit-content;
+    font-size: $fs-sidenote;
+    line-height: $lh-tight;
+}
+
+.subheader-container {
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.document-title {
+    font-size: $fs-semibold;
+    line-height: $lh-normal;
+    width: 100%;
+}
+
+.document-label, .document-section-title {
+    font-weight: 500;
+}
+
+.document-table-row, .subrow {
+  border: 1px solid #333;
+  padding: 0.25rem;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+}
+
+.document-table-row:nth-of-type(1) {
+    padding: 0;
+    display: flex;
+    border: none;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.document-table-row:nth-of-type(1) > .subrow {
+    flex-grow: 1 1;
+    border: 1px solid #333;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.row-title {
+    position: absolute;
+    font-size: $fs-sidenote;
+    font-weight: 500;
+    top: 0;
+    left: 0;
+    transform: translate(5%, 5%);
+    font-size: $fs-document-title;
+}
+
+.row-body {
+    width: 100%;
+}
+
+.document-form-table .document-date {
+    color: $primary-color;
+    font-weight: 600;
+    border: 2px solid $primary-color;
+    padding: 1rem;
+    position: absolute;
+    left: 10%;
+    top: 5%;
+    transform: translate(-50%, -50%);
+    transform: rotate(3deg);
+    opacity: 0.9;
+}
+
+.row-body {
+    padding: 1rem 0.25rem 0.25rem 0.25rem;
+}
+
+.document-section {
+    flex-direction: row;
+    text-align: left;
+    gap: 1rem;
+}
+
+.document-footer {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translate(1%, 150%);
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex-grow: 1 1;
+    flex-direction: column;
+    opacity: 0.9;
+}
+
+.document-footer hr {
+    width: 100%;
+}
+
+.page-number, .headnotes-container {
+    margin-top: 0.25rem;
+    margin-right: 2%;
+    font-size: $fs-sidenote;
+}

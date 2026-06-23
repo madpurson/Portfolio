@@ -17,6 +17,7 @@
     @extend .container;
     flex-direction: column;
     height: auto;
+    aspect-ratio: 16 / 9;
 }
 
 .row {

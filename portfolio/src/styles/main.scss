@@ -15,9 +15,14 @@
 /* layout */
 @use './layout/board';
 @use './layout/layout';
+@use './layout/projectBody';
+@use './layout/loader';
 
 /* components */
 // @use './components/pin';
 @use './components/paper';
 @use './components/eye';
 @use './components/sticker';
+@use './components/receipt';
+@use './components/document';
+@use './components/clippedPhoto';

@@ -7,27 +7,30 @@ import { useEffect } from "react";
 // import { mouseTracker, startLoop } from "./mouseTracker";
 
 export function LandingPageBody() {
+    const [isHovered, setIsHovered] = React.useState(false);
+
     useEffect(() => {
-    const tracker = mouseTracker("patrick-container");
-    if (!tracker) return;
+        if (!isHovered) return;
+        const tracker = mouseTracker("patrick-container");
+        if (!tracker) return;
 
-    const leftEye = document.getElementById("left-eye");
-    const rightEye = document.getElementById("right-eye");
+        const leftEye = document.getElementById("left-eye");
+        const rightEye = document.getElementById("right-eye");
 
-    if (!leftEye || !rightEye) return;
+        if (!leftEye || !rightEye) return;
 
-    const stop = startLoop(() => {
-        renderEye(leftEye, tracker.mouse);
-        renderEye(rightEye, tracker.mouse);
-    }, tracker.isActive);
+        const stop = startLoop(() => {
+            renderEye(leftEye, tracker.mouse);
+            renderEye(rightEye, tracker.mouse);
+        }, tracker.isActive);
 
-    return () => {
-        stop();
-        tracker.destroy();
-    };
-    }, []);
+        return () => {
+            stop();
+            tracker.destroy();
+        };
+    }, [isHovered]);
     return (
-        <div className="mt-10 page-body landing-page-body relative">
+        <div onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)} className="mt-10 page-body landing-page-body relative">
             <div id="patrick-container" className="w-full box-border landing-banner-container container">
                 <img className="landing-banner-image sticker--main" id="patrick" src="/images/banner1.png" alt="banner" />
                 <div className="eyes-container container">
